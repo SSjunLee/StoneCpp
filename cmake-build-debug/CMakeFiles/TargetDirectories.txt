@@ -1,0 +1,3 @@
+D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir
+D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/rebuild_cache.dir
