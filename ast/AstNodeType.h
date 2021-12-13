@@ -48,5 +48,31 @@ public:
     std::string op() const{return mChildren[1]->toString();};
 };
 
+class IfStmt: public AstList{
+public:
+    using AstList::AstList;
+    std::string toString() const noexcept override;
+    AstTree::cptr condition() const{return child(0);};
+    AstTree::cptr thenBlock() const{return child(1);};
+    AstTree::cptr elseBlock() const{
+        return numChild()>2?child(2): nullptr;
+    };
 
+};
+class WhileStmt: public AstList{
+public:
+    using AstList::AstList;
+    AstTree::cptr condition() const{return child(0);}
+    AstTree::cptr body() const {return child(1);}
+    std::string toString() const noexcept override;
+};
+class NullStmt: public AstList{
+public:
+    using AstList::AstList;
+};
+class BlockStmt: public AstList{
+public:
+    using AstList::AstList;
+    std::string toString() const noexcept override;
+};
 #endif //STONE_ASTNODETYPE_H

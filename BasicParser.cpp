@@ -8,7 +8,7 @@ std::unordered_set<std::string> BasicParser::mReserved{")","}","]",";"};
 
 BasicParser::AstPtr BasicParser::parse(Lexer &lexer) {
     //return primaryOr->parse(lexer);
-    return expr->parse(lexer);
+    return program->parse(lexer);
 }
 
 BasicParser::BasicParser() {
@@ -41,6 +41,22 @@ BasicParser::BasicParser() {
             {"%", {4, true}}
     });
 
+   simple = mFactory.rule<PrimaryExpr>(true)->ast(expr);
+
+   block = mFactory.rule<BlockStmt>();
+   statement = mFactory.orRule({
+       mFactory.rule<IfStmt>()->sep({"if"})->ast(expr)->ast(block)
+       ->option(mFactory.rule<>()->sep({"else"})->ast(block)),
+       mFactory.rule<WhileStmt>()->sep({"while"})->ast(expr)->ast(block),
+       simple
+   });
+   block->sep({"{"})->option(statement)->repeat(
+           mFactory.rule<>()->sep({";",Token::eol})->option(statement)
+           )->sep({"}"});
+
+   nullTmp = mFactory.rule<NullStmt>();
+   programOr = mFactory.orRule({statement,nullTmp});
+   program = mFactory.rule<>()->ast(programOr)->sep({";", Token::eol});
 }
 
 

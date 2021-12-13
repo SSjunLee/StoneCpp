@@ -74,7 +74,15 @@ memory
 StoneException.h
 D:/code/cpp/Stone/StoneException.h
 
+D:/code/cpp/Stone/ast/AstNodeType.cpp
+AstNodeType.h
 D:/code/cpp/Stone/ast/AstNodeType.h
+
+D:/code/cpp/Stone/ast/AstNodeType.h
+AstTree.h
+D:/code/cpp/Stone/ast/AstTree.h
+
+D:/code/cpp/Stone/ast/AstTree.cpp
 AstTree.h
 D:/code/cpp/Stone/ast/AstTree.h
 
@@ -85,4 +93,16 @@ vector
 -
 ../Token.hpp
 D:/code/cpp/Stone/Token.hpp
+
+D:/code/cpp/Stone/main.cpp
+iostream
+-
+fstream
+-
+Token.hpp
+D:/code/cpp/Stone/Token.hpp
+BasicParser.h
+D:/code/cpp/Stone/BasicParser.h
+Lexer.h
+D:/code/cpp/Stone/Lexer.h
 

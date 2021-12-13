@@ -215,6 +215,45 @@ private:
     }
 };
 
+
+class OptionLogic : public Logic {
+private:
+    Rule *mRule;
+public:
+    OptionLogic(Rule *r) : mRule(r) {}
+
+    void parse(Lexer &l, std::vector<AstTree::cptr> &list) override {
+        if (match(l))list.push_back(mRule->parse(l));
+    }
+
+    bool match(Lexer &l) override {
+        return mRule->match(l);
+    }
+
+    bool ignore() const noexcept override { return true; }
+};
+
+class RepeatLogic : public Logic {
+private:
+    Rule *mRule;
+public:
+    RepeatLogic(Rule *r) : mRule(r) {}
+
+    void parse(Lexer &l, std::vector<AstTree::cptr> &list) override {
+        while (match(l)) {
+            auto ast = mRule->parse(l);
+            if (ast)
+                list.push_back(ast);
+        }
+    }
+
+    bool match(Lexer &l) override {
+        return mRule->match(l);
+    }
+
+    bool ignore() const noexcept override { return true; }
+};
+
 /**
  *  //列表规则：将逻辑进行匹配，并用匹配结果构造语法树分支节点
  * @tparam T :默认为分支节点类
@@ -301,9 +340,20 @@ public:
         return this;
     }
 
+    ListRule<T> *option(Rule *rule) {
+        mLogics.push_back(new OptionLogic(rule));
+        return this;
+    }
+
+    ListRule<T> *repeat(Rule *rule) {
+        mLogics.push_back(new RepeatLogic(rule));
+        return this;
+    }
+
+
     template<typename E>
-    ListRule<T> *expression(Rule *f, const std::unordered_map<std::string, Precedence>&ops){
-        mLogics.push_back(new ExprLogic<E>(f,ops));
+    ListRule<T> *expression(Rule *f, const std::unordered_map<std::string, Precedence> &ops) {
+        mLogics.push_back(new ExprLogic<E>(f, ops));
         return this;
     };
 };

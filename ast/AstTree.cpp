@@ -35,14 +35,15 @@ std::string AstList::location() const noexcept {
 }
 
 std::string AstList::toString() const noexcept {
-    std::string ret = "(";
+    std::string ret;
+    //ret = "(";
     std::string sep;
     for(auto&c:mChildren){
         ret+=sep;
         sep=" ";
         ret+=c->toString();
     }
-    ret+=")";
+    //ret+=")";
     return ret;
 }
 

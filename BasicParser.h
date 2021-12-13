@@ -27,6 +27,12 @@ public:
     OrRule *primaryOr;
     OrRule *factor;
     ListRule<PrimaryExpr> *primary;
+    ListRule<PrimaryExpr> *simple;
+    OrRule *statement;
+    ListRule<BlockStmt> *block;
+    ListRule<NullStmt> *nullTmp;
+    OrRule *programOr;
+    ListRule<AstList> *program;
 };
 
 
