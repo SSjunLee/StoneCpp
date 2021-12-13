@@ -4,8 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/code/cpp/Stone/BasicParser.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/BasicParser.cpp.obj"
   "D:/code/cpp/Stone/Lexer.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/Lexer.cpp.obj"
   "D:/code/cpp/Stone/ParseException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ParseException.cpp.obj"
+  "D:/code/cpp/Stone/ast/AstNodeType.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj"
+  "D:/code/cpp/Stone/ast/AstTree.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ast/AstTree.cpp.obj"
   "D:/code/cpp/Stone/main.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

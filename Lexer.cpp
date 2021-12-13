@@ -15,7 +15,7 @@ public:
         return true;
     }
 
-    int getNumber() override {
+    int getNumber() const override {
         return v;
     }
     std::string getText() const noexcept override {
@@ -99,7 +99,7 @@ void Lexer::readLine() {
             //std::cout << line;
             lineNumber++;
         }
-    } catch (std::ios_base::failure e) {
+    } catch (std::ios_base::failure &e) {
         throw ParseException(e.what());
     }
     if (reader.eof()) {

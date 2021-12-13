@@ -142,6 +142,33 @@ Stone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/build
 .PHONY : Stone/fast
 
+BasicParser.obj: BasicParser.cpp.obj
+
+.PHONY : BasicParser.obj
+
+# target to build an object file
+BasicParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.obj
+.PHONY : BasicParser.cpp.obj
+
+BasicParser.i: BasicParser.cpp.i
+
+.PHONY : BasicParser.i
+
+# target to preprocess a source file
+BasicParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.i
+.PHONY : BasicParser.cpp.i
+
+BasicParser.s: BasicParser.cpp.s
+
+.PHONY : BasicParser.s
+
+# target to generate assembly for a file
+BasicParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.s
+.PHONY : BasicParser.cpp.s
+
 Lexer.obj: Lexer.cpp.obj
 
 .PHONY : Lexer.obj
@@ -196,6 +223,60 @@ ParseException.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ParseException.cpp.s
 .PHONY : ParseException.cpp.s
 
+ast/AstNodeType.obj: ast/AstNodeType.cpp.obj
+
+.PHONY : ast/AstNodeType.obj
+
+# target to build an object file
+ast/AstNodeType.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj
+.PHONY : ast/AstNodeType.cpp.obj
+
+ast/AstNodeType.i: ast/AstNodeType.cpp.i
+
+.PHONY : ast/AstNodeType.i
+
+# target to preprocess a source file
+ast/AstNodeType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstNodeType.cpp.i
+.PHONY : ast/AstNodeType.cpp.i
+
+ast/AstNodeType.s: ast/AstNodeType.cpp.s
+
+.PHONY : ast/AstNodeType.s
+
+# target to generate assembly for a file
+ast/AstNodeType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstNodeType.cpp.s
+.PHONY : ast/AstNodeType.cpp.s
+
+ast/AstTree.obj: ast/AstTree.cpp.obj
+
+.PHONY : ast/AstTree.obj
+
+# target to build an object file
+ast/AstTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstTree.cpp.obj
+.PHONY : ast/AstTree.cpp.obj
+
+ast/AstTree.i: ast/AstTree.cpp.i
+
+.PHONY : ast/AstTree.i
+
+# target to preprocess a source file
+ast/AstTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstTree.cpp.i
+.PHONY : ast/AstTree.cpp.i
+
+ast/AstTree.s: ast/AstTree.cpp.s
+
+.PHONY : ast/AstTree.s
+
+# target to generate assembly for a file
+ast/AstTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstTree.cpp.s
+.PHONY : ast/AstTree.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -232,12 +313,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Stone
+	@echo ... BasicParser.obj
+	@echo ... BasicParser.i
+	@echo ... BasicParser.s
 	@echo ... Lexer.obj
 	@echo ... Lexer.i
 	@echo ... Lexer.s
 	@echo ... ParseException.obj
 	@echo ... ParseException.i
 	@echo ... ParseException.s
+	@echo ... ast/AstNodeType.obj
+	@echo ... ast/AstNodeType.i
+	@echo ... ast/AstNodeType.s
+	@echo ... ast/AstTree.obj
+	@echo ... ast/AstTree.i
+	@echo ... ast/AstTree.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

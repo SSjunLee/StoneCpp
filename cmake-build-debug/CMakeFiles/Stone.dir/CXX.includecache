@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+D:/code/cpp/Stone/BasicParser.cpp
+BasicParser.h
+D:/code/cpp/Stone/BasicParser.h
+ast/AstNodeType.h
+D:/code/cpp/Stone/ast/AstNodeType.h
+
+D:/code/cpp/Stone/BasicParser.h
+ParseException.h
+D:/code/cpp/Stone/ParseException.h
+ast/AstTree.h
+D:/code/cpp/Stone/ast/AstTree.h
+ast/AstNodeType.h
+D:/code/cpp/Stone/ast/AstNodeType.h
+Lexer.h
+D:/code/cpp/Stone/Lexer.h
+Parse.hpp
+D:/code/cpp/Stone/Parse.hpp
+unordered_set
+-
+
 D:/code/cpp/Stone/Lexer.h
 iostream
 -
@@ -17,6 +37,22 @@ ParseException.h
 D:/code/cpp/Stone/ParseException.h
 regex
 -
+
+D:/code/cpp/Stone/Parse.hpp
+unordered_set
+-
+unordered_map
+-
+utility
+-
+vector
+-
+ast/AstTree.h
+D:/code/cpp/Stone/ast/AstTree.h
+Lexer.h
+D:/code/cpp/Stone/Lexer.h
+ParseException.h
+D:/code/cpp/Stone/ParseException.h
 
 D:/code/cpp/Stone/ParseException.h
 string
@@ -38,13 +74,15 @@ memory
 StoneException.h
 D:/code/cpp/Stone/StoneException.h
 
-D:/code/cpp/Stone/main.cpp
-iostream
+D:/code/cpp/Stone/ast/AstNodeType.h
+AstTree.h
+D:/code/cpp/Stone/ast/AstTree.h
+
+D:/code/cpp/Stone/ast/AstTree.h
+memory
 -
-fstream
+vector
 -
-Token.hpp
+../Token.hpp
 D:/code/cpp/Stone/Token.hpp
-Lexer.h
-D:/code/cpp/Stone/Lexer.h
 

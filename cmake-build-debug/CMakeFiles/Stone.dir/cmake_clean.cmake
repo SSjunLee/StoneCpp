@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Stone.dir/BasicParser.cpp.obj"
   "CMakeFiles/Stone.dir/Lexer.cpp.obj"
   "CMakeFiles/Stone.dir/ParseException.cpp.obj"
+  "CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj"
+  "CMakeFiles/Stone.dir/ast/AstTree.cpp.obj"
   "CMakeFiles/Stone.dir/main.cpp.obj"
   "Stone.exe"
   "Stone.exe.manifest"

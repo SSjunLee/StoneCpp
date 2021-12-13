@@ -22,7 +22,7 @@ public:
     virtual bool isIdentifier() const noexcept {return false;}
     virtual bool isNumber() const noexcept {return false;}
     virtual bool isString() const noexcept {return false;}
-    virtual int getNumber(){throw StoneException("not number token");}
+    virtual int getNumber() const{throw StoneException("not number token");}
     virtual std::string getText() const noexcept {return "";}
 
     static ptr eof;
