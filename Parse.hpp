@@ -264,8 +264,14 @@ private:
     std::vector<Logic *> mLogics;
     bool only;
 public:
-    explicit ListRule(bool only = false) : only(only) {}
-
+    explicit ListRule(bool only = false) : only(only) {
+        if(typeid(T) == typeid(AstList)){
+            this->only = true;
+        }
+    }
+    ~ListRule(){
+        for(auto r:mLogics)delete r;
+    }
     AstTree::cptr parse(Lexer &lexer) override {
         std::vector<AstTree::cptr> lst;
         for (auto r:mLogics) {
@@ -273,6 +279,7 @@ public:
         }
         if (only) {
             if (lst.size() == 0)return nullptr;
+            if(lst.size() == 1)
             return lst.front();
         }
         return std::make_shared<T>(lst);

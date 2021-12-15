@@ -80,10 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/code/cpp/Stone/BasicEnv.hpp">
+			<Option target="Stone"/>
+		</Unit>
 		<Unit filename="D:/code/cpp/Stone/BasicParser.cpp">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/BasicParser.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/BasicType.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/BasicType.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/Env.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Lexer.cpp">

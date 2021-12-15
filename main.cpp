@@ -3,6 +3,7 @@
 #include "Token.hpp"
 #include "BasicParser.h"
 #include "Lexer.h"
+#include "BasicEnv.hpp"
 using namespace std;
 
 void testLexer(){
@@ -29,7 +30,7 @@ void testParser(){
     }
 }
 void testParser2(){
-    ifstream in("D:\\code\\cpp\\Stone\\file");
+    ifstream in("D:\\code\\cpp\\Stone\\testDemo\\f1");
     Lexer lexer(in);
     BasicParser parser;
     while(lexer.peek(0)!=Token::eof){
@@ -38,8 +39,26 @@ void testParser2(){
     }
 }
 
+void testBaseType(){
+    Num::ptr n1(std::make_shared<Num>(1)),n2(std::make_shared<Str>("abc"));
+    cout<<n1->add(n2);
+}
+
+void testEval(){
+    ifstream in("D:\\code\\cpp\\Stone\\testDemo\\f0");
+    Lexer lexer(in);
+    BasicEnv env;
+    BasicParser parser;
+    while(lexer.peek(0)!=Token::eof){
+        auto bp= parser.parse(lexer);
+        cout<<"=>"<<bp->eval(env)<<endl;
+    }
+}
+
 int main() {
     system("chcp 65001");
     //testParser();
-    testParser2();
+    //testParser2();
+    //testBaseType();
+    testEval();
 }

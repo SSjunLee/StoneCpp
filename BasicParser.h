@@ -32,7 +32,7 @@ public:
     ListRule<BlockStmt> *block;
     ListRule<NullStmt> *nullTmp;
     OrRule *programOr;
-    ListRule<AstList> *program;
+    ListRule<> *program;
 };
 
 

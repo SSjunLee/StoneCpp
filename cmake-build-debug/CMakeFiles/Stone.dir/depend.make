@@ -3,6 +3,8 @@
 
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../BasicParser.cpp
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../BasicParser.h
+CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../Lexer.h
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../Parse.hpp
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../ParseException.h
@@ -10,6 +12,10 @@ CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../Token.hpp
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../ast/AstNodeType.h
 CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../ast/AstTree.h
+
+CMakeFiles/Stone.dir/BasicType.cpp.obj: ../BasicType.cpp
+CMakeFiles/Stone.dir/BasicType.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/BasicType.cpp.obj: ../StoneException.h
 
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../Lexer.cpp
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../Lexer.h
@@ -22,18 +28,25 @@ CMakeFiles/Stone.dir/ParseException.cpp.obj: ../ParseException.h
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../Token.hpp
 
+CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../Token.hpp
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../ast/AstNodeType.cpp
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../ast/AstNodeType.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../ast/AstTree.h
 
+CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../Token.hpp
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../ast/AstTree.cpp
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../ast/AstTree.h
 
+CMakeFiles/Stone.dir/main.cpp.obj: ../BasicEnv.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../BasicParser.h
+CMakeFiles/Stone.dir/main.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/main.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Lexer.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Parse.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../ParseException.h

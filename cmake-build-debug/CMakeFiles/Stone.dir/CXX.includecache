@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+D:/code/cpp/Stone/BasicEnv.hpp
+unordered_map
+-
+Env.h
+D:/code/cpp/Stone/Env.h
+
 D:/code/cpp/Stone/BasicParser.cpp
 BasicParser.h
 D:/code/cpp/Stone/BasicParser.h
@@ -25,6 +31,20 @@ Parse.hpp
 D:/code/cpp/Stone/Parse.hpp
 unordered_set
 -
+
+D:/code/cpp/Stone/BasicType.h
+memory
+-
+utility
+-
+ostream
+-
+StoneException.h
+D:/code/cpp/Stone/StoneException.h
+
+D:/code/cpp/Stone/Env.h
+BasicType.h
+D:/code/cpp/Stone/BasicType.h
 
 D:/code/cpp/Stone/Lexer.h
 iostream
@@ -82,10 +102,6 @@ D:/code/cpp/Stone/ast/AstNodeType.h
 AstTree.h
 D:/code/cpp/Stone/ast/AstTree.h
 
-D:/code/cpp/Stone/ast/AstTree.cpp
-AstTree.h
-D:/code/cpp/Stone/ast/AstTree.h
-
 D:/code/cpp/Stone/ast/AstTree.h
 memory
 -
@@ -93,6 +109,10 @@ vector
 -
 ../Token.hpp
 D:/code/cpp/Stone/Token.hpp
+../BasicType.h
+D:/code/cpp/Stone/BasicType.h
+../Env.h
+D:/code/cpp/Stone/Env.h
 
 D:/code/cpp/Stone/main.cpp
 iostream
@@ -105,4 +125,6 @@ BasicParser.h
 D:/code/cpp/Stone/BasicParser.h
 Lexer.h
 D:/code/cpp/Stone/Lexer.h
+BasicEnv.hpp
+D:/code/cpp/Stone/BasicEnv.hpp
 

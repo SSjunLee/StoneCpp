@@ -7,7 +7,6 @@
 std::unordered_set<std::string> BasicParser::mReserved{")","}","]",";"};
 
 BasicParser::AstPtr BasicParser::parse(Lexer &lexer) {
-    //return primaryOr->parse(lexer);
     return program->parse(lexer);
 }
 

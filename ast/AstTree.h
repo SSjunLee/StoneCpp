@@ -8,7 +8,8 @@
 #include <memory>
 #include <vector>
 #include "../Token.hpp"
-
+#include "../BasicType.h"
+#include "../Env.h"
 class AstTree {
 public:
     typedef std::shared_ptr<AstTree> ptr;
@@ -17,7 +18,9 @@ public:
     virtual int numChild() const noexcept = 0;
     virtual std::string location() const noexcept = 0;
     virtual std::string toString() const noexcept = 0;
+    virtual Object::ptr eval(Env&env) const = 0;
     virtual ~AstTree() = default;
+    virtual std::string nodeType() const = 0;
 };
 
 class AstLeaf: public AstTree{
@@ -32,6 +35,10 @@ public:
     std::string location() const noexcept override;
 
     std::string toString() const noexcept override;
+
+    Object::ptr eval(Env &env) const override;
+
+    std::string nodeType() const override {return "AstLeaf";}
 };
 class AstList: public AstTree{
 protected:
@@ -46,6 +53,10 @@ public:
     std::string location() const noexcept override;
 
     std::string toString() const noexcept override;
+
+     Object::ptr eval(Env &env) const override;
+
+    std::string nodeType() const override{return "AstList";}
 };
 
 std::ostream& operator<<(std::ostream&,const AstTree::cptr&);

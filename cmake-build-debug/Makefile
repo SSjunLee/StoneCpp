@@ -169,6 +169,33 @@ BasicParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.s
 .PHONY : BasicParser.cpp.s
 
+BasicType.obj: BasicType.cpp.obj
+
+.PHONY : BasicType.obj
+
+# target to build an object file
+BasicType.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.obj
+.PHONY : BasicType.cpp.obj
+
+BasicType.i: BasicType.cpp.i
+
+.PHONY : BasicType.i
+
+# target to preprocess a source file
+BasicType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.i
+.PHONY : BasicType.cpp.i
+
+BasicType.s: BasicType.cpp.s
+
+.PHONY : BasicType.s
+
+# target to generate assembly for a file
+BasicType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.s
+.PHONY : BasicType.cpp.s
+
 Lexer.obj: Lexer.cpp.obj
 
 .PHONY : Lexer.obj
@@ -316,6 +343,9 @@ help:
 	@echo ... BasicParser.obj
 	@echo ... BasicParser.i
 	@echo ... BasicParser.s
+	@echo ... BasicType.obj
+	@echo ... BasicType.i
+	@echo ... BasicType.s
 	@echo ... Lexer.obj
 	@echo ... Lexer.i
 	@echo ... Lexer.s
