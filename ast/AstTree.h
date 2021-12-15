@@ -19,6 +19,7 @@ public:
     virtual std::string location() const noexcept = 0;
     virtual std::string toString() const noexcept = 0;
     virtual Object::ptr eval(Env&env) const = 0;
+    virtual Token::cptr getToken() const = 0;
     virtual ~AstTree() = default;
     virtual std::string nodeType() const = 0;
 };
@@ -28,6 +29,9 @@ protected:
     Token::cptr token;
 public:
     AstLeaf(Token::cptr p):token(p){}
+    Token::cptr getToken() const override{
+        return token;
+    }
     cptr child(size_t i) const noexcept override;
 
     int numChild() const noexcept override;
@@ -50,6 +54,9 @@ public:
 
     int numChild() const noexcept override;
 
+    Token::cptr getToken() const override{
+        throw StoneException("this ast node can't get token");
+    }
     std::string location() const noexcept override;
 
     std::string toString() const noexcept override;

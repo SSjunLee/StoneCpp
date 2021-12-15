@@ -215,7 +215,6 @@ private:
     }
 };
 
-
 class OptionLogic : public Logic {
 private:
     Rule *mRule;
@@ -224,6 +223,26 @@ public:
 
     void parse(Lexer &l, std::vector<AstTree::cptr> &list) override {
         if (match(l))list.push_back(mRule->parse(l));
+    }
+
+    bool match(Lexer &l) override {
+        return mRule->match(l);
+    }
+
+    bool ignore() const noexcept override { return true; }
+};
+
+template<typename T>
+class MaybeLogic : public Logic {
+private:
+    Rule *mRule;
+public:
+    MaybeLogic(Rule *r) : mRule(r) {}
+
+    void parse(Lexer &l, std::vector<AstTree::cptr> &list) override {
+        //和Option的不同之处在于会创建一个空的ast节点
+        if (match(l))list.push_back(mRule->parse(l));
+        else list.push_back(std::make_shared<T>(std::vector<AstTree::cptr>()));
     }
 
     bool match(Lexer &l) override {
@@ -321,7 +340,7 @@ public:
      * @param r 一个字典，字典里的字符不能被当作标识符
      * @return
      */
-    template<typename E>
+    template<typename E = AstLeaf>
     ListRule<T> *identifier(const std::unordered_set<std::string> &r) {
         mLogics.push_back(new IdLogic<E>(r));
         return this;
@@ -347,11 +366,18 @@ public:
         return this;
     }
 
+    //0次或1次，如果是0次，添加空分支节点
+    template<typename E>
+    ListRule<T>*maybe(ListRule<E>*rule){
+        mLogics.push_back(new MaybeLogic<E>(rule));
+        return this;
+    }
+    //0次或一次，如果是0次，则不添加节点
     ListRule<T> *option(Rule *rule) {
         mLogics.push_back(new OptionLogic(rule));
         return this;
     }
-
+    // 0次或多次
     ListRule<T> *repeat(Rule *rule) {
         mLogics.push_back(new RepeatLogic(rule));
         return this;
@@ -371,6 +397,12 @@ private:
 public:
     explicit OrRule(std::vector<Rule *> rules) : mRules(std::move(rules)) {}
 
+    void push_back(std::vector<Rule*>r){
+        mRules.insert(mRules.end(),r.begin(),r.end());
+    }
+    void push_front(std::vector<Rule*>r){
+        mRules.insert(mRules.begin(),r.begin(),r.end());
+    }
     AstTree::cptr parse(Lexer &lexer) override {
         for (auto e:mRules) {
             if (!e->match(lexer))continue;

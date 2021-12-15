@@ -3,8 +3,9 @@
 //
 
 #include "ParseException.h"
-
-ParseException::ParseException(const std::string &msg):msg(msg) {}
+#include <iostream>
+ParseException::ParseException(const std::string &msg):msg(msg) {
+}
 
 ParseException::ParseException(const std::string &msg, Token::cptr token) {
 

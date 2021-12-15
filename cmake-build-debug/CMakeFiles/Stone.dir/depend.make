@@ -17,6 +17,19 @@ CMakeFiles/Stone.dir/BasicType.cpp.obj: ../BasicType.cpp
 CMakeFiles/Stone.dir/BasicType.cpp.obj: ../BasicType.h
 CMakeFiles/Stone.dir/BasicType.cpp.obj: ../StoneException.h
 
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../BasicParser.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../BasicType.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../Env.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../FuncParser.cpp
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../FuncParser.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../Lexer.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../Parse.hpp
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../ParseException.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../StoneException.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../Token.hpp
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../ast/AstNodeType.h
+CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../ast/AstTree.h
+
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../Lexer.cpp
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../Lexer.h
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../ParseException.h
@@ -47,6 +60,7 @@ CMakeFiles/Stone.dir/main.cpp.obj: ../BasicEnv.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../BasicParser.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../BasicType.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Env.h
+CMakeFiles/Stone.dir/main.cpp.obj: ../FuncParser.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Lexer.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Parse.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../ParseException.h

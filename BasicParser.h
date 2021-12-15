@@ -22,12 +22,12 @@ public:
     BasicParser();
     AstPtr parse(Lexer&lexer);
 
+protected:
     ListRule<> *expr;
-
     OrRule *primaryOr;
     OrRule *factor;
-    ListRule<PrimaryExpr> *primary;
-    ListRule<PrimaryExpr> *simple;
+    ListRule<PrimaryExpr> *primary;// "(" expr ")" | NUMBER | IDENTIFIER | STRING
+    ListRule<PrimaryExpr> *simple; // expr
     OrRule *statement;
     ListRule<BlockStmt> *block;
     ListRule<NullStmt> *nullTmp;

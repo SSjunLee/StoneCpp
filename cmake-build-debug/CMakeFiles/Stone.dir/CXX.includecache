@@ -46,6 +46,10 @@ D:/code/cpp/Stone/Env.h
 BasicType.h
 D:/code/cpp/Stone/BasicType.h
 
+D:/code/cpp/Stone/FuncParser.h
+BasicParser.h
+D:/code/cpp/Stone/BasicParser.h
+
 D:/code/cpp/Stone/Lexer.h
 iostream
 -
@@ -94,10 +98,6 @@ memory
 StoneException.h
 D:/code/cpp/Stone/StoneException.h
 
-D:/code/cpp/Stone/ast/AstNodeType.cpp
-AstNodeType.h
-D:/code/cpp/Stone/ast/AstNodeType.h
-
 D:/code/cpp/Stone/ast/AstNodeType.h
 AstTree.h
 D:/code/cpp/Stone/ast/AstTree.h
@@ -127,4 +127,6 @@ Lexer.h
 D:/code/cpp/Stone/Lexer.h
 BasicEnv.hpp
 D:/code/cpp/Stone/BasicEnv.hpp
+FuncParser.h
+D:/code/cpp/Stone/FuncParser.h
 

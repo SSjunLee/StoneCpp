@@ -98,6 +98,12 @@
 		<Unit filename="D:/code/cpp/Stone/Env.h">
 			<Option target="Stone"/>
 		</Unit>
+		<Unit filename="D:/code/cpp/Stone/FuncParser.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/FuncParser.h">
+			<Option target="Stone"/>
+		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Lexer.cpp">
 			<Option target="Stone"/>
 		</Unit>

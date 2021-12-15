@@ -117,4 +117,52 @@ public:
     std::string nodeType() const override {return  "BlockStmt";}
     Object::ptr eval(Env &env) const override;
 };
+
+//函数的支持
+class ParamList: public AstList{
+    using AstList::AstList;
+    std::string nodeType() const override {return  "ParamList";}
+    std::string name(int i) const{return child(i)->getToken()->getText();}
+    size_t size() const noexcept {return numChild();}
+
+};
+class DefStmt: public AstList{
+public:
+    using AstList::AstList;
+    std::string nodeType() const override {return  "DefStmt";}
+    std::string name() const{
+        return child(0)->getToken()->getText();
+    }
+
+    AstTree::cptr params() const {
+        return child(1);
+    }
+    AstTree::cptr body() const{
+        return child(2);
+    }
+    std::string toString() const noexcept override{
+        return "def ("+name()+params()->toString()+body()->toString()+")";
+    }
+};
+
+class Postfix: public AstList{
+public:
+    using AstList::AstList;
+    std::string nodeType() const override {return  "Postfix";}
+    std::string toString() const noexcept override{
+        return "postfix" + AstList::toString();
+    }
+
+};
+
+class Args: public Postfix{
+public:
+    using Postfix::Postfix;
+    std::string nodeType() const override {return  "Args";}
+    int size() const {return numChild();}
+    std::string toString() const noexcept override{
+        return "args" + AstList::toString();
+    }
+};
+
 #endif //STONE_ASTNODETYPE_H

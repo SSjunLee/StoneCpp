@@ -25,7 +25,7 @@ BasicParser::BasicParser() {
 
     factor = mFactory.orRule({
                                      mFactory.rule<NegativeExpr>()->sep({"-"})->ast(primary),
-                                     primaryOr
+                                     primary
     });
 
     expr->expression<BinaryExpr>(factor,{

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/code/cpp/Stone/BasicParser.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/BasicParser.cpp.obj"
   "D:/code/cpp/Stone/BasicType.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/BasicType.cpp.obj"
+  "D:/code/cpp/Stone/FuncParser.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/FuncParser.cpp.obj"
   "D:/code/cpp/Stone/Lexer.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/Lexer.cpp.obj"
   "D:/code/cpp/Stone/ParseException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ParseException.cpp.obj"
   "D:/code/cpp/Stone/ast/AstNodeType.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj"

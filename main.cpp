@@ -4,6 +4,7 @@
 #include "BasicParser.h"
 #include "Lexer.h"
 #include "BasicEnv.hpp"
+#include "FuncParser.h"
 using namespace std;
 
 void testLexer(){
@@ -55,10 +56,26 @@ void testEval(){
     }
 }
 
+void testFuncParser(){
+    ifstream in("D:\\code\\cpp\\Stone\\testDemo\\f2");
+    Lexer lexer(in);
+    BasicEnv env;
+    FuncParser parser;
+    while(lexer.peek(0)!=Token::eof){
+        /*if(lexer.peek(0)->getText() == Token::eol){
+            lexer.read();
+            continue;
+        }*/
+        auto bp= parser.parse(lexer);
+        cout<<bp<<endl;
+    }
+}
+
 int main() {
     system("chcp 65001");
     //testParser();
     //testParser2();
     //testBaseType();
-    testEval();
+    //testEval();
+    testFuncParser();
 }
