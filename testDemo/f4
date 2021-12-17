@@ -1,0 +1,11 @@
+print("startTime ",currentTime())
+def f(n){
+if n<2{
+n
+}else{
+f(n-1)+f(n-2)
+}
+
+}
+print(f(11))
+print("endTime ",currentTime())

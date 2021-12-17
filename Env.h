@@ -5,7 +5,7 @@
 #ifndef STONE_ENV_H
 #define STONE_ENV_H
 
-#include "stype/BasicType.h"
+#include "stype/Object.h"
 class Env {
 public:
     virtual ~Env() = default;

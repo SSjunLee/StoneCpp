@@ -34,11 +34,28 @@ CMakeFiles/Stone.dir/Lexer.cpp.obj
  D:/code/cpp/Stone/ParseException.h
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
+CMakeFiles/Stone.dir/Naive.cpp.obj
+ D:/code/cpp/Stone/Env.h
+ D:/code/cpp/Stone/Naive.cpp
+ D:/code/cpp/Stone/Naive.h
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/Token.hpp
+ D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/NaiveFunction.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/ParseException.cpp.obj
  D:/code/cpp/Stone/ParseException.cpp
  D:/code/cpp/Stone/ParseException.h
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
+CMakeFiles/Stone.dir/StoneException.cpp.obj
+ D:/code/cpp/Stone/Env.h
+ D:/code/cpp/Stone/StoneException.cpp
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/Token.hpp
+ D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/StoneException.h
@@ -48,6 +65,7 @@ CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj
  D:/code/cpp/Stone/ast/AstTree.h
  D:/code/cpp/Stone/stype/BasicType.h
  D:/code/cpp/Stone/stype/Function.h
+ D:/code/cpp/Stone/stype/NaiveFunction.h
  D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj
  D:/code/cpp/Stone/Env.h
@@ -55,13 +73,13 @@ CMakeFiles/Stone.dir/ast/AstTree.cpp.obj
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstTree.cpp
  D:/code/cpp/Stone/ast/AstTree.h
- D:/code/cpp/Stone/stype/BasicType.h
  D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/main.cpp.obj
  D:/code/cpp/Stone/BasicParser.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/FuncParser.h
  D:/code/cpp/Stone/Lexer.h
+ D:/code/cpp/Stone/Naive.h
  D:/code/cpp/Stone/NestEnv.hpp
  D:/code/cpp/Stone/Parse.hpp
  D:/code/cpp/Stone/ParseException.h
@@ -86,9 +104,13 @@ CMakeFiles/Stone.dir/stype/Function.cpp.obj
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstTree.h
- D:/code/cpp/Stone/stype/BasicType.h
  D:/code/cpp/Stone/stype/Function.cpp
  D:/code/cpp/Stone/stype/Function.h
+ D:/code/cpp/Stone/stype/Object.h
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/stype/NaiveFunction.cpp
+ D:/code/cpp/Stone/stype/NaiveFunction.h
  D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/stype/Object.cpp.obj
  D:/code/cpp/Stone/StoneException.h

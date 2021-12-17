@@ -104,6 +104,12 @@
 		<Unit filename="D:/code/cpp/Stone/Lexer.h">
 			<Option target="Stone"/>
 		</Unit>
+		<Unit filename="D:/code/cpp/Stone/Naive.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/Naive.h">
+			<Option target="Stone"/>
+		</Unit>
 		<Unit filename="D:/code/cpp/Stone/NestEnv.hpp">
 			<Option target="Stone"/>
 		</Unit>
@@ -114,6 +120,9 @@
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/ParseException.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/StoneException.cpp">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/StoneException.h">
@@ -147,6 +156,12 @@
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/stype/Function.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/NaiveFunction.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/NaiveFunction.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/stype/Object.cpp">

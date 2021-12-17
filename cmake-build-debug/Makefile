@@ -223,6 +223,33 @@ Lexer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/Lexer.cpp.s
 .PHONY : Lexer.cpp.s
 
+Naive.obj: Naive.cpp.obj
+
+.PHONY : Naive.obj
+
+# target to build an object file
+Naive.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/Naive.cpp.obj
+.PHONY : Naive.cpp.obj
+
+Naive.i: Naive.cpp.i
+
+.PHONY : Naive.i
+
+# target to preprocess a source file
+Naive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/Naive.cpp.i
+.PHONY : Naive.cpp.i
+
+Naive.s: Naive.cpp.s
+
+.PHONY : Naive.s
+
+# target to generate assembly for a file
+Naive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/Naive.cpp.s
+.PHONY : Naive.cpp.s
+
 ParseException.obj: ParseException.cpp.obj
 
 .PHONY : ParseException.obj
@@ -249,6 +276,33 @@ ParseException.s: ParseException.cpp.s
 ParseException.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ParseException.cpp.s
 .PHONY : ParseException.cpp.s
+
+StoneException.obj: StoneException.cpp.obj
+
+.PHONY : StoneException.obj
+
+# target to build an object file
+StoneException.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.obj
+.PHONY : StoneException.cpp.obj
+
+StoneException.i: StoneException.cpp.i
+
+.PHONY : StoneException.i
+
+# target to preprocess a source file
+StoneException.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.i
+.PHONY : StoneException.cpp.i
+
+StoneException.s: StoneException.cpp.s
+
+.PHONY : StoneException.s
+
+# target to generate assembly for a file
+StoneException.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.s
+.PHONY : StoneException.cpp.s
 
 ast/AstNodeType.obj: ast/AstNodeType.cpp.obj
 
@@ -385,6 +439,33 @@ stype/Function.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Function.cpp.s
 .PHONY : stype/Function.cpp.s
 
+stype/NaiveFunction.obj: stype/NaiveFunction.cpp.obj
+
+.PHONY : stype/NaiveFunction.obj
+
+# target to build an object file
+stype/NaiveFunction.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj
+.PHONY : stype/NaiveFunction.cpp.obj
+
+stype/NaiveFunction.i: stype/NaiveFunction.cpp.i
+
+.PHONY : stype/NaiveFunction.i
+
+# target to preprocess a source file
+stype/NaiveFunction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.i
+.PHONY : stype/NaiveFunction.cpp.i
+
+stype/NaiveFunction.s: stype/NaiveFunction.cpp.s
+
+.PHONY : stype/NaiveFunction.s
+
+# target to generate assembly for a file
+stype/NaiveFunction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.s
+.PHONY : stype/NaiveFunction.cpp.s
+
 stype/Object.obj: stype/Object.cpp.obj
 
 .PHONY : stype/Object.obj
@@ -430,9 +511,15 @@ help:
 	@echo ... Lexer.obj
 	@echo ... Lexer.i
 	@echo ... Lexer.s
+	@echo ... Naive.obj
+	@echo ... Naive.i
+	@echo ... Naive.s
 	@echo ... ParseException.obj
 	@echo ... ParseException.i
 	@echo ... ParseException.s
+	@echo ... StoneException.obj
+	@echo ... StoneException.i
+	@echo ... StoneException.s
 	@echo ... ast/AstNodeType.obj
 	@echo ... ast/AstNodeType.i
 	@echo ... ast/AstNodeType.s
@@ -448,6 +535,9 @@ help:
 	@echo ... stype/Function.obj
 	@echo ... stype/Function.i
 	@echo ... stype/Function.s
+	@echo ... stype/NaiveFunction.obj
+	@echo ... stype/NaiveFunction.i
+	@echo ... stype/NaiveFunction.s
 	@echo ... stype/Object.obj
 	@echo ... stype/Object.i
 	@echo ... stype/Object.s

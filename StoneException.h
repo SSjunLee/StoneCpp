@@ -7,12 +7,14 @@
 
 #include <stdexcept>
 #include <string>
+#include <memory>
+class AstTree;
 
 class StoneException : public std::runtime_error {
 public:
     using std::runtime_error::runtime_error;
+    StoneException(const std::string&msg,std::shared_ptr<const AstTree> tree);
 };
-
 
 
 #endif //STONE_STONEEXCEPTION_H

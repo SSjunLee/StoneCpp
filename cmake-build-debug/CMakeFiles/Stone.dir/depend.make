@@ -34,10 +34,27 @@ CMakeFiles/Stone.dir/Lexer.cpp.obj: ../ParseException.h
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/Lexer.cpp.obj: ../Token.hpp
 
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../Env.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../Naive.cpp
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../Naive.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../StoneException.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../Token.hpp
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../ast/AstTree.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../stype/BasicType.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../stype/NaiveFunction.h
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../stype/Object.h
+
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../ParseException.cpp
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../ParseException.h
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/ParseException.cpp.obj: ../Token.hpp
+
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../Env.h
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../StoneException.cpp
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../StoneException.h
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../Token.hpp
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../ast/AstTree.h
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../stype/Object.h
 
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../StoneException.h
@@ -47,6 +64,7 @@ CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../ast/AstNodeType.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../ast/AstTree.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../stype/BasicType.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../stype/Function.h
+CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../stype/NaiveFunction.h
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj: ../stype/Object.h
 
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../Env.h
@@ -54,13 +72,13 @@ CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../Token.hpp
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../ast/AstTree.cpp
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../ast/AstTree.h
-CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../stype/BasicType.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../stype/Object.h
 
 CMakeFiles/Stone.dir/main.cpp.obj: ../BasicParser.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../FuncParser.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Lexer.h
+CMakeFiles/Stone.dir/main.cpp.obj: ../Naive.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../NestEnv.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../Parse.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../ParseException.h
@@ -85,10 +103,14 @@ CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../NestEnv.hpp
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../Token.hpp
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../ast/AstTree.h
-CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../stype/BasicType.h
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../stype/Function.cpp
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../stype/Function.h
 CMakeFiles/Stone.dir/stype/Function.cpp.obj: ../stype/Object.h
+
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: ../StoneException.h
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: ../stype/NaiveFunction.cpp
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: ../stype/NaiveFunction.h
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: ../stype/Object.h
 
 CMakeFiles/Stone.dir/stype/Object.cpp.obj: ../StoneException.h
 CMakeFiles/Stone.dir/stype/Object.cpp.obj: ../stype/Object.cpp

@@ -6,6 +6,7 @@
 #include "AstNodeType.h"
 #include "../stype/Function.h"
 #include "../stype/BasicType.h"
+#include "../stype/NaiveFunction.h"
 std::string IfStmt::toString() const noexcept {
     std::string ret;
     ret+="( if(" + condition()->toString()+")"+thenBlock()->toString();
@@ -74,7 +75,10 @@ Object::ptr PrimaryExpr::evalSub(Env &env, int nest) const {
 
 Object::ptr PrimaryExpr::eval(Env &env) const {
     //TODO 先暂时这样实现
-    auto res = operand()->eval(env); //如果是函数调用，child(0)必然是函数的名字，是一个Name类型
+    //如果是函数调用，child(0)必然是函数的名字，是一个Name类型
+    //name.eval 就是从env 里取出name关联的obj
+    auto res = operand()->eval(env);
+
     //std::cout<<operand()->nodeType()<<std::endl;
     int n = numChild();
     for (int i = 1; i <n ; ++i) {
@@ -126,12 +130,29 @@ Object::ptr DefStmt::eval(Env &env) const {
 
 
 
-
+//定义实参
 void ParamList::eval(Env &env,int idx,Object::ptr value) const{
     env.putNew(name(idx),value);
 }
 
 Object::ptr Args::eval(Env &env, Object::ptr value) const {
+
+    //处理naive函数
+    auto naiveFunc = std::dynamic_pointer_cast<NaiveFunction>(value);
+    if(naiveFunc){
+            int n = naiveFunc->numArg();
+            if(n!=-1 && size()!=n){
+                throw StoneException("bad number of args"+ location());
+            }
+            std::vector<Object::ptr> args;
+            args.reserve(size());
+            for(auto&c:mChildren){
+              args.push_back(c->eval(env));
+            }
+            return naiveFunc->invoke(args);
+    }
+
+
     auto func = std::dynamic_pointer_cast<const Function>(value);
     if(!func)throw StoneException("bad function "+this->location());
     auto parms=  std::dynamic_pointer_cast<const ParamList>(func->parameters());
@@ -145,7 +166,6 @@ Object::ptr Args::eval(Env &env, Object::ptr value) const {
     auto ret = func->body()->eval(*newEv);
     delete newEv;
     return ret;
-    return nullptr;
 }
 
 AstTree::cptr Fun::parameters() const {

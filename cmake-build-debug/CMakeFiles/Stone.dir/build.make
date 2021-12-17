@@ -206,6 +206,45 @@ CMakeFiles/Stone.dir/stype/Function.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/stype/Function.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\stype\Function.cpp -o CMakeFiles\Stone.dir\stype\Function.cpp.s
 
+CMakeFiles/Stone.dir/Naive.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/Naive.cpp.obj: ../Naive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Stone.dir/Naive.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\Naive.cpp.obj -c D:\code\cpp\Stone\Naive.cpp
+
+CMakeFiles/Stone.dir/Naive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/Naive.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\Naive.cpp > CMakeFiles\Stone.dir\Naive.cpp.i
+
+CMakeFiles/Stone.dir/Naive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/Naive.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\Naive.cpp -o CMakeFiles\Stone.dir\Naive.cpp.s
+
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj: ../stype/NaiveFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\stype\NaiveFunction.cpp.obj -c D:\code\cpp\Stone\stype\NaiveFunction.cpp
+
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\stype\NaiveFunction.cpp > CMakeFiles\Stone.dir\stype\NaiveFunction.cpp.i
+
+CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\stype\NaiveFunction.cpp -o CMakeFiles\Stone.dir\stype\NaiveFunction.cpp.s
+
+CMakeFiles/Stone.dir/StoneException.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/StoneException.cpp.obj: ../StoneException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Stone.dir/StoneException.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\StoneException.cpp.obj -c D:\code\cpp\Stone\StoneException.cpp
+
+CMakeFiles/Stone.dir/StoneException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/StoneException.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\StoneException.cpp > CMakeFiles\Stone.dir\StoneException.cpp.i
+
+CMakeFiles/Stone.dir/StoneException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/StoneException.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\StoneException.cpp -o CMakeFiles\Stone.dir\StoneException.cpp.s
+
 # Object files for target Stone
 Stone_OBJECTS = \
 "CMakeFiles/Stone.dir/main.cpp.obj" \
@@ -217,7 +256,10 @@ Stone_OBJECTS = \
 "CMakeFiles/Stone.dir/stype/BasicType.cpp.obj" \
 "CMakeFiles/Stone.dir/FuncParser.cpp.obj" \
 "CMakeFiles/Stone.dir/stype/Object.cpp.obj" \
-"CMakeFiles/Stone.dir/stype/Function.cpp.obj"
+"CMakeFiles/Stone.dir/stype/Function.cpp.obj" \
+"CMakeFiles/Stone.dir/Naive.cpp.obj" \
+"CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj" \
+"CMakeFiles/Stone.dir/StoneException.cpp.obj"
 
 # External object files for target Stone
 Stone_EXTERNAL_OBJECTS =
@@ -232,11 +274,14 @@ Stone.exe: CMakeFiles/Stone.dir/stype/BasicType.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/FuncParser.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/Object.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/Function.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/Naive.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/StoneException.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/build.make
 Stone.exe: CMakeFiles/Stone.dir/linklibs.rsp
 Stone.exe: CMakeFiles/Stone.dir/objects1.rsp
 Stone.exe: CMakeFiles/Stone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Stone.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Stone.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Stone.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -7,4 +7,4 @@ add_compile_options(-Wall -g
         #-Werror
         )
 
-add_executable(Stone main.cpp Token.hpp StoneException.h Lexer.h Lexer.cpp ParseException.cpp ParseException.h ast/AstTree.cpp ast/AstTree.h ast/AstNodeType.cpp ast/AstNodeType.h BasicParser.cpp BasicParser.h Parse.hpp stype/BasicType.h stype/BasicType.cpp Env.h BasicEnv.hpp FuncParser.h FuncParser.cpp NestEnv.hpp stype/Object.cpp stype/Object.h stype/Function.cpp stype/Function.h)
+add_executable(Stone main.cpp Token.hpp StoneException.h Lexer.h Lexer.cpp ParseException.cpp ParseException.h ast/AstTree.cpp ast/AstTree.h ast/AstNodeType.cpp ast/AstNodeType.h BasicParser.cpp BasicParser.h Parse.hpp stype/BasicType.h stype/BasicType.cpp Env.h BasicEnv.hpp FuncParser.h FuncParser.cpp NestEnv.hpp stype/Object.cpp stype/Object.h stype/Function.cpp stype/Function.h Naive.cpp Naive.h stype/NaiveFunction.cpp stype/NaiveFunction.h StoneException.cpp)

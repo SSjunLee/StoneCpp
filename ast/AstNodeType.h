@@ -6,6 +6,7 @@
 #define STONE_ASTNODETYPE_H
 
 #include "AstTree.h"
+#include "../stype/BasicType.h"
 
 class NumLiteral: public AstLeaf{
 public:
@@ -170,7 +171,7 @@ public:
 
 };
 
-class Args: public Postfix{
+class Args: public Postfix,std::enable_shared_from_this<Args>{
 public:
     using Postfix::Postfix;
     std::string nodeType() const override {return  "Args";}
