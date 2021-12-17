@@ -4,7 +4,6 @@
 CMakeFiles/Stone.dir/BasicParser.cpp.obj
  D:/code/cpp/Stone/BasicParser.cpp
  D:/code/cpp/Stone/BasicParser.h
- D:/code/cpp/Stone/BasicType.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/Lexer.h
  D:/code/cpp/Stone/Parse.hpp
@@ -13,13 +12,10 @@ CMakeFiles/Stone.dir/BasicParser.cpp.obj
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstNodeType.h
  D:/code/cpp/Stone/ast/AstTree.h
-CMakeFiles/Stone.dir/BasicType.cpp.obj
- D:/code/cpp/Stone/BasicType.cpp
- D:/code/cpp/Stone/BasicType.h
- D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/FuncParser.cpp.obj
  D:/code/cpp/Stone/BasicParser.h
- D:/code/cpp/Stone/BasicType.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/FuncParser.cpp
  D:/code/cpp/Stone/FuncParser.h
@@ -30,6 +26,8 @@ CMakeFiles/Stone.dir/FuncParser.cpp.obj
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstNodeType.h
  D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/Lexer.cpp.obj
  D:/code/cpp/Stone/Lexer.cpp
  D:/code/cpp/Stone/Lexer.h
@@ -42,27 +40,30 @@ CMakeFiles/Stone.dir/ParseException.cpp.obj
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
 CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj
- D:/code/cpp/Stone/BasicType.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstNodeType.cpp
  D:/code/cpp/Stone/ast/AstNodeType.h
  D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Function.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj
- D:/code/cpp/Stone/BasicType.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/StoneException.h
  D:/code/cpp/Stone/Token.hpp
  D:/code/cpp/Stone/ast/AstTree.cpp
  D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Object.h
 CMakeFiles/Stone.dir/main.cpp.obj
  D:/code/cpp/Stone/BasicEnv.hpp
  D:/code/cpp/Stone/BasicParser.h
- D:/code/cpp/Stone/BasicType.h
  D:/code/cpp/Stone/Env.h
  D:/code/cpp/Stone/FuncParser.h
  D:/code/cpp/Stone/Lexer.h
+ D:/code/cpp/Stone/NestEnv.hpp
  D:/code/cpp/Stone/Parse.hpp
  D:/code/cpp/Stone/ParseException.h
  D:/code/cpp/Stone/StoneException.h
@@ -70,3 +71,27 @@ CMakeFiles/Stone.dir/main.cpp.obj
  D:/code/cpp/Stone/ast/AstNodeType.h
  D:/code/cpp/Stone/ast/AstTree.h
  D:/code/cpp/Stone/main.cpp
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Object.h
+CMakeFiles/Stone.dir/stype/BasicType.cpp.obj
+ D:/code/cpp/Stone/Env.h
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/Token.hpp
+ D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.cpp
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Object.h
+CMakeFiles/Stone.dir/stype/Function.cpp.obj
+ D:/code/cpp/Stone/Env.h
+ D:/code/cpp/Stone/NestEnv.hpp
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/Token.hpp
+ D:/code/cpp/Stone/ast/AstTree.h
+ D:/code/cpp/Stone/stype/BasicType.h
+ D:/code/cpp/Stone/stype/Function.cpp
+ D:/code/cpp/Stone/stype/Function.h
+ D:/code/cpp/Stone/stype/Object.h
+CMakeFiles/Stone.dir/stype/Object.cpp.obj
+ D:/code/cpp/Stone/StoneException.h
+ D:/code/cpp/Stone/stype/Object.cpp
+ D:/code/cpp/Stone/stype/Object.h

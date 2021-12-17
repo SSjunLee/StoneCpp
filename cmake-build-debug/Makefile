@@ -169,33 +169,6 @@ BasicParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.s
 .PHONY : BasicParser.cpp.s
 
-BasicType.obj: BasicType.cpp.obj
-
-.PHONY : BasicType.obj
-
-# target to build an object file
-BasicType.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.obj
-.PHONY : BasicType.cpp.obj
-
-BasicType.i: BasicType.cpp.i
-
-.PHONY : BasicType.i
-
-# target to preprocess a source file
-BasicType.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.i
-.PHONY : BasicType.cpp.i
-
-BasicType.s: BasicType.cpp.s
-
-.PHONY : BasicType.s
-
-# target to generate assembly for a file
-BasicType.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicType.cpp.s
-.PHONY : BasicType.cpp.s
-
 FuncParser.obj: FuncParser.cpp.obj
 
 .PHONY : FuncParser.obj
@@ -358,6 +331,87 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stype/BasicType.obj: stype/BasicType.cpp.obj
+
+.PHONY : stype/BasicType.obj
+
+# target to build an object file
+stype/BasicType.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/BasicType.cpp.obj
+.PHONY : stype/BasicType.cpp.obj
+
+stype/BasicType.i: stype/BasicType.cpp.i
+
+.PHONY : stype/BasicType.i
+
+# target to preprocess a source file
+stype/BasicType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/BasicType.cpp.i
+.PHONY : stype/BasicType.cpp.i
+
+stype/BasicType.s: stype/BasicType.cpp.s
+
+.PHONY : stype/BasicType.s
+
+# target to generate assembly for a file
+stype/BasicType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/BasicType.cpp.s
+.PHONY : stype/BasicType.cpp.s
+
+stype/Function.obj: stype/Function.cpp.obj
+
+.PHONY : stype/Function.obj
+
+# target to build an object file
+stype/Function.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Function.cpp.obj
+.PHONY : stype/Function.cpp.obj
+
+stype/Function.i: stype/Function.cpp.i
+
+.PHONY : stype/Function.i
+
+# target to preprocess a source file
+stype/Function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Function.cpp.i
+.PHONY : stype/Function.cpp.i
+
+stype/Function.s: stype/Function.cpp.s
+
+.PHONY : stype/Function.s
+
+# target to generate assembly for a file
+stype/Function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Function.cpp.s
+.PHONY : stype/Function.cpp.s
+
+stype/Object.obj: stype/Object.cpp.obj
+
+.PHONY : stype/Object.obj
+
+# target to build an object file
+stype/Object.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Object.cpp.obj
+.PHONY : stype/Object.cpp.obj
+
+stype/Object.i: stype/Object.cpp.i
+
+.PHONY : stype/Object.i
+
+# target to preprocess a source file
+stype/Object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Object.cpp.i
+.PHONY : stype/Object.cpp.i
+
+stype/Object.s: stype/Object.cpp.s
+
+.PHONY : stype/Object.s
+
+# target to generate assembly for a file
+stype/Object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Object.cpp.s
+.PHONY : stype/Object.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -370,9 +424,6 @@ help:
 	@echo ... BasicParser.obj
 	@echo ... BasicParser.i
 	@echo ... BasicParser.s
-	@echo ... BasicType.obj
-	@echo ... BasicType.i
-	@echo ... BasicType.s
 	@echo ... FuncParser.obj
 	@echo ... FuncParser.i
 	@echo ... FuncParser.s
@@ -391,6 +442,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... stype/BasicType.obj
+	@echo ... stype/BasicType.i
+	@echo ... stype/BasicType.s
+	@echo ... stype/Function.obj
+	@echo ... stype/Function.i
+	@echo ... stype/Function.s
+	@echo ... stype/Object.obj
+	@echo ... stype/Object.i
+	@echo ... stype/Object.s
 .PHONY : help
 
 

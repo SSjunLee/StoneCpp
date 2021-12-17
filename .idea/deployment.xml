@@ -12,7 +12,7 @@
       <paths name="Remote Host (9617f782-907f-444b-8cb8-1f5873c2b2bb)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/Stone" local="$PROJECT_DIR$" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

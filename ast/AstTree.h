@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 #include "../Token.hpp"
-#include "../BasicType.h"
+#include "../stype/Object.h"
 #include "../Env.h"
 class AstTree {
 public:

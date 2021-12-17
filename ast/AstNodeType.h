@@ -43,7 +43,8 @@ public:
     AstTree::cptr operand() const {return child(0);}
     Object::ptr eval(Env &env) const override{
         //TODO 先暂时这样实现
-        return operand()->eval(env);
+        return evalSub(env,0);
+        //return operand()->eval(env);
     };
     std::string toString() const noexcept override{
         return "PrimaryExpr " + AstList::toString();
@@ -54,7 +55,7 @@ private:
     AstList::cptr postFix(int nest) const{
         return child((size_t)numChild() - nest -1);
     }
-    //Object::ptr evalSub(Env &env,int nest) const;
+    Object::ptr evalSub(Env &env,int nest) const;
 
 };
 
@@ -120,10 +121,13 @@ public:
 
 //函数的支持
 class ParamList: public AstList{
+public:
     using AstList::AstList;
     std::string nodeType() const override {return  "ParamList";}
+    //返回第i个参数的名字
     std::string name(int i) const{return child(i)->getToken()->getText();}
     size_t size() const noexcept {return numChild();}
+    void eval(Env &env,int idx,Object::ptr value) const;
 
 };
 class DefStmt: public AstList{
@@ -143,11 +147,13 @@ public:
     std::string toString() const noexcept override{
         return "def ("+name()+params()->toString()+body()->toString()+")";
     }
+    Object::ptr eval(Env &env) const override;
 };
 
 class Postfix: public AstList{
 public:
     using AstList::AstList;
+    virtual Object::ptr eval(Env &env,Object::ptr target) const = 0;
     std::string nodeType() const override {return  "Postfix";}
     std::string toString() const noexcept override{
         return "postfix" + AstList::toString();
@@ -160,6 +166,7 @@ public:
     using Postfix::Postfix;
     std::string nodeType() const override {return  "Args";}
     int size() const {return numChild();}
+    Object::ptr eval(Env &env, Object::ptr value)const override;
     std::string toString() const noexcept override{
         return "args" + AstList::toString();
     }

@@ -1,9 +1,10 @@
 //
 // Created by 12206 on 2021/12/12.
 //
-
+#include <iostream>
 #include "AstNodeType.h"
-
+#include "../stype/Function.h"
+#include "../stype/BasicType.h"
 std::string IfStmt::toString() const noexcept {
     std::string ret;
     ret+="( if(" + condition()->toString()+")"+thenBlock()->toString();
@@ -57,6 +58,17 @@ Object::ptr BlockStmt::eval(Env &env) const {
 
 bool PrimaryExpr::hasPostFix(int nest) const {
     return numChild() - nest > 1;
+}
+
+//nest 表示从外层数的函数调用的次数
+//写成递归是为了扩展闭包
+Object::ptr PrimaryExpr::evalSub(Env &env, int nest) const {
+    if(hasPostFix(nest)){
+        auto target= evalSub(env,nest+1);
+        auto postfixPtr = std::dynamic_pointer_cast<const Postfix>(postFix(nest));
+        return postfixPtr->eval(env,target);
+    }else
+    return operand()->eval(env);
 };
 
 Object::ptr BinaryExpr::eval(Env &env) const {
@@ -88,4 +100,33 @@ Object::ptr NegativeExpr::eval(Env &env) const {
     auto v= std::dynamic_pointer_cast<Num>(operand()->eval(env));
     if(v) return std::make_shared<Num>(v->value());
     throw StoneException("bad type for -");
+}
+
+Object::ptr DefStmt::eval(Env &env) const {
+     env.putNew(name(),std::make_shared<Function>(params(),body(),&env));
+    return std::make_shared<Str>(name());
+}
+
+
+
+
+void ParamList::eval(Env &env,int idx,Object::ptr value) const{
+    env.putNew(name(idx),value);
+}
+
+Object::ptr Args::eval(Env &env, Object::ptr value) const {
+    auto func = std::dynamic_pointer_cast<const Function>(value);
+    if(!func)throw StoneException("bad function "+this->location());
+    auto parms=  std::dynamic_pointer_cast<const ParamList>(func->parameters());
+    if(!parms)throw StoneException("bad number of argments..."+ this->location());
+    Env* funcEv = func->makeEnv(); //创建一个临时的函数计算环境
+    //TODO
+    int id = 0;
+    for(auto arg:mChildren){
+        parms->eval(*funcEv,id++,arg->eval(env));
+    }
+    auto ret = func->body()->eval(*funcEv);
+    delete funcEv;
+    return ret;
+    return nullptr;
 }

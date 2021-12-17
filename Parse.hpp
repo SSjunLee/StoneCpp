@@ -284,22 +284,37 @@ private:
     bool only;
 public:
     explicit ListRule(bool only = false) : only(only) {
-        if(typeid(T) == typeid(AstList)){
+        if (typeid(T) == typeid(AstList)) {
             this->only = true;
         }
     }
-    ~ListRule(){
-        for(auto r:mLogics)delete r;
+
+    ~ListRule() {
+        for (auto r:mLogics)delete r;
     }
+
     AstTree::cptr parse(Lexer &lexer) override {
         std::vector<AstTree::cptr> lst;
         for (auto r:mLogics) {
             r->parse(lexer, lst);
         }
+        /**
+         * 这个参数主要为了解决两种情况
+         * 1. 如果当前的规则只是一个wrapper，则不需要为这个规则创建astNode，直接处理它的儿子即可
+         * 比如 rule().ast(node),我们不需要为这个rule创建ast，而是直接为它的儿子node创建ast
+         *
+         * 2. 如果当前规则是个primary
+         * 之前为了扩展性  primary = mFactory.rule<PrimaryExpr>(true)->ast(primaryOr);
+         * 这里解析的时候，不会为primary创建PrimaryExpr节点，而是直接为它的儿子primaryOr创建节点
+         * 当处理函数时  primary = mFactory.rule<PrimaryExpr>(true)->ast(primaryOr)->repeat(postfix)
+         * 则必须创建PrimaryExpr节点，primarOr和postfix则作为这个节点的儿子
+         *
+         *
+         */
         if (only) {
             if (lst.size() == 0)return nullptr;
-            if(lst.size() == 1)
-            return lst.front();
+            if (lst.size() == 1)
+                return lst.front();
         }
         return std::make_shared<T>(lst);
     }
@@ -368,15 +383,17 @@ public:
 
     //0次或1次，如果是0次，添加空分支节点
     template<typename E>
-    ListRule<T>*maybe(ListRule<E>*rule){
+    ListRule<T> *maybe(ListRule<E> *rule) {
         mLogics.push_back(new MaybeLogic<E>(rule));
         return this;
     }
+
     //0次或一次，如果是0次，则不添加节点
     ListRule<T> *option(Rule *rule) {
         mLogics.push_back(new OptionLogic(rule));
         return this;
     }
+
     // 0次或多次
     ListRule<T> *repeat(Rule *rule) {
         mLogics.push_back(new RepeatLogic(rule));
@@ -397,12 +414,14 @@ private:
 public:
     explicit OrRule(std::vector<Rule *> rules) : mRules(std::move(rules)) {}
 
-    void push_back(std::vector<Rule*>r){
-        mRules.insert(mRules.end(),r.begin(),r.end());
+    void push_back(std::vector<Rule *> r) {
+        mRules.insert(mRules.end(), r.begin(), r.end());
     }
-    void push_front(std::vector<Rule*>r){
-        mRules.insert(mRules.begin(),r.begin(),r.end());
+
+    void push_front(std::vector<Rule *> r) {
+        mRules.insert(mRules.begin(), r.begin(), r.end());
     }
+
     AstTree::cptr parse(Lexer &lexer) override {
         for (auto e:mRules) {
             if (!e->match(lexer))continue;

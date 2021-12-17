@@ -89,12 +89,6 @@
 		<Unit filename="D:/code/cpp/Stone/BasicParser.h">
 			<Option target="Stone"/>
 		</Unit>
-		<Unit filename="D:/code/cpp/Stone/BasicType.cpp">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/BasicType.h">
-			<Option target="Stone"/>
-		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Env.h">
 			<Option target="Stone"/>
 		</Unit>
@@ -108,6 +102,9 @@
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Lexer.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/NestEnv.hpp">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Parse.hpp">
@@ -138,6 +135,24 @@
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/main.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/BasicType.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/BasicType.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/Function.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/Function.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/Object.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/stype/Object.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/CMakeLists.txt">

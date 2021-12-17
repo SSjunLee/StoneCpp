@@ -1,4 +1,4 @@
-def func(a,b){
- sum=a+b
+def f(a,b,c){
+a+b+c
 }
-func(1,2)
+f(1,2,3)
