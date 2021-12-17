@@ -23,4 +23,6 @@ FuncParser::FuncParser():BasicParser() {
     simple->option(args);//这条模式可以匹配这样的函数调用 sum 2
     programOr->push_front({ def });
 
+    //添加闭包支持
+    primaryOr->push_front({mFactory.rule<Fun>()->sep({"fun"})->ast(paramList)->ast(block)});
 }

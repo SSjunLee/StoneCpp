@@ -41,11 +41,7 @@ class PrimaryExpr: public AstList{
 public:
     using AstList::AstList;
     AstTree::cptr operand() const {return child(0);}
-    Object::ptr eval(Env &env) const override{
-        //TODO 先暂时这样实现
-        return evalSub(env,0);
-        //return operand()->eval(env);
-    };
+    Object::ptr eval(Env &env) const override;
     std::string toString() const noexcept override{
         return "PrimaryExpr " + AstList::toString();
     }
@@ -84,6 +80,18 @@ public:
     std::string nodeType() const override {return "BinaryExpr";}
 };
 
+class DefineStmt: public AstList{
+public:
+    using AstList::AstList;
+    std::string nodeType() const override{return "DefineStmt";}
+    std::string name() const {return child(0)->getToken()->getText();}
+    AstList::cptr value() const {return child(1);}
+    std::string toString() const noexcept override;
+
+    Object::ptr eval(Env &env) const override;
+
+};
+
 class IfStmt: public AstList{
 public:
     using AstList::AstList;
@@ -109,6 +117,7 @@ class NullStmt: public AstList{
 public:
     using AstList::AstList;
     std::string nodeType() const override {return "NullStmt";}
+    Object::ptr eval(Env &env) const override{return nullptr;}
 
 };
 class BlockStmt: public AstList{
@@ -170,6 +179,16 @@ public:
     std::string toString() const noexcept override{
         return "args" + AstList::toString();
     }
+};
+
+class Fun: public AstList{
+public:
+    using AstList::AstList;
+    AstTree::cptr parameters() const;
+    AstTree::cptr body() const;
+    std::string toString() const noexcept override;
+    Object::ptr eval(Env &env) const override;
+
 };
 
 #endif //STONE_ASTNODETYPE_H

@@ -2,6 +2,7 @@
 // Created by 12206 on 2021/12/12.
 //
 #include <iostream>
+#include <sstream>
 #include "AstNodeType.h"
 #include "../stype/Function.h"
 #include "../stype/BasicType.h"
@@ -69,6 +70,22 @@ Object::ptr PrimaryExpr::evalSub(Env &env, int nest) const {
         return postfixPtr->eval(env,target);
     }else
     return operand()->eval(env);
+}
+
+Object::ptr PrimaryExpr::eval(Env &env) const {
+    //TODO 先暂时这样实现
+    auto res = operand()->eval(env); //如果是函数调用，child(0)必然是函数的名字，是一个Name类型
+    //std::cout<<operand()->nodeType()<<std::endl;
+    int n = numChild();
+    for (int i = 1; i <n ; ++i) {
+        auto args = std::dynamic_pointer_cast<const Args>(child(i));
+        res= args->eval(env,res);
+    }
+
+
+    return res;
+    //return evalSub(env,0);
+
 };
 
 Object::ptr BinaryExpr::eval(Env &env) const {
@@ -119,14 +136,43 @@ Object::ptr Args::eval(Env &env, Object::ptr value) const {
     if(!func)throw StoneException("bad function "+this->location());
     auto parms=  std::dynamic_pointer_cast<const ParamList>(func->parameters());
     if(!parms)throw StoneException("bad number of argments..."+ this->location());
-    Env* funcEv = func->makeEnv(); //创建一个临时的函数计算环境
+    Env* newEv = func->makeEnv(); //创建一个临时的函数计算环境
     //TODO
     int id = 0;
     for(auto arg:mChildren){
-        parms->eval(*funcEv,id++,arg->eval(env));
+        parms->eval(*newEv, id++, arg->eval(env));
     }
-    auto ret = func->body()->eval(*funcEv);
-    delete funcEv;
+    auto ret = func->body()->eval(*newEv);
+    delete newEv;
     return ret;
     return nullptr;
+}
+
+AstTree::cptr Fun::parameters() const {
+    return child(0);
+}
+
+AstTree::cptr Fun::body() const{
+    return child(1);
+}
+
+std::string Fun::toString() const noexcept {
+    return "( fun"+parameters()->toString()+" "+body()->toString()+")";
+}
+
+Object::ptr Fun::eval(Env &env) const {
+    return std::make_shared<Function>(parameters(),body(),&env);
+}
+
+
+std::string DefineStmt::toString() const noexcept {
+    std::stringstream ss;
+    ss<<"(var "<<name()<<" = "<<value()->toString()<<" )";
+    return ss.str();
+}
+
+Object::ptr DefineStmt::eval(Env &env) const {
+    auto r = value()->eval(env);
+    env.putNew(name(),r);
+    return r;
 }

@@ -13,7 +13,8 @@ public:
     explicit NestEnv(Env*o):outer(o){}
     void put(const std::string &name, Object::ptr v) override{
         auto env= where(name);
-        if(!env)env = this;
+        //if(!env)env = this;
+        if(!env)throw StoneException(name+" not define");
         env->putNew(name,v);
     }
     Object::ptr get(const std::string &name) override{

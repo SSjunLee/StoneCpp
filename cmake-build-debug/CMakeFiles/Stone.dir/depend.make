@@ -57,7 +57,6 @@ CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../ast/AstTree.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../stype/BasicType.h
 CMakeFiles/Stone.dir/ast/AstTree.cpp.obj: ../stype/Object.h
 
-CMakeFiles/Stone.dir/main.cpp.obj: ../BasicEnv.hpp
 CMakeFiles/Stone.dir/main.cpp.obj: ../BasicParser.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../Env.h
 CMakeFiles/Stone.dir/main.cpp.obj: ../FuncParser.h

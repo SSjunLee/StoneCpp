@@ -48,6 +48,9 @@ BasicParser::BasicParser() {
        mFactory.rule<IfStmt>()->sep({"if"})->ast(expr)->ast(block)
        ->option(mFactory.rule<>()->sep({"else"})->ast(block)),
        mFactory.rule<WhileStmt>()->sep({"while"})->ast(expr)->ast(block),
+       //添加定义式定义变量
+       mFactory.rule<DefineStmt>()->sep({"var"})->identifier(mReserved)
+       ->option(mFactory.rule()->sep({"="})->ast(primary)),
        simple
    });
    block->sep({"{"})->option(statement)->repeat(
