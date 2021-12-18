@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/code/cpp/Stone/FuncParser.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/FuncParser.cpp.obj"
   "D:/code/cpp/Stone/Lexer.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/Lexer.cpp.obj"
   "D:/code/cpp/Stone/Naive.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/Naive.cpp.obj"
-  "D:/code/cpp/Stone/ParseException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ParseException.cpp.obj"
-  "D:/code/cpp/Stone/StoneException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/StoneException.cpp.obj"
   "D:/code/cpp/Stone/ast/AstNodeType.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj"
   "D:/code/cpp/Stone/ast/AstTree.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/ast/AstTree.cpp.obj"
+  "D:/code/cpp/Stone/exception/ParseException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/exception/ParseException.cpp.obj"
+  "D:/code/cpp/Stone/exception/StoneException.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/exception/StoneException.cpp.obj"
   "D:/code/cpp/Stone/main.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/main.cpp.obj"
   "D:/code/cpp/Stone/stype/BasicType.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/stype/BasicType.cpp.obj"
   "D:/code/cpp/Stone/stype/Function.cpp" "D:/code/cpp/Stone/cmake-build-debug/CMakeFiles/Stone.dir/stype/Function.cpp.obj"
@@ -22,6 +22,11 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../"
+  "../ast"
+  "../env"
+  "../exception"
+  "../stype"
   )
 
 # Targets to which this target links.

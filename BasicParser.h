@@ -4,7 +4,7 @@
 
 #ifndef STONE_BASICPARSER_H
 #define STONE_BASICPARSER_H
-#include "ParseException.h"
+#include "exception/ParseException.h"
 #include "ast/AstTree.h"
 #include "ast/AstNodeType.h"
 #include "Lexer.h"

@@ -7,9 +7,9 @@
 
 #include <memory>
 #include <vector>
-#include "../Token.hpp"
-#include "../stype/Object.h"
-#include "../Env.h"
+#include "Token.hpp"
+#include "Object.h"
+#include "Env.h"
 class AstTree {
 public:
     typedef std::shared_ptr<AstTree> ptr;

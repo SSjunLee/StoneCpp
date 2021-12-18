@@ -6,7 +6,7 @@
 #define STONE_ASTNODETYPE_H
 
 #include "AstTree.h"
-#include "../stype/BasicType.h"
+#include "BasicType.h"
 
 class NumLiteral: public AstLeaf{
 public:

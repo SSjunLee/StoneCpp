@@ -24,6 +24,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/code/cpp/Stone"/>
+					<Add directory="D:/code/cpp/Stone/ast"/>
+					<Add directory="D:/code/cpp/Stone/env"/>
+					<Add directory="D:/code/cpp/Stone/exception"/>
+					<Add directory="D:/code/cpp/Stone/stype"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -45,6 +50,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/code/cpp/Stone"/>
+					<Add directory="D:/code/cpp/Stone/ast"/>
+					<Add directory="D:/code/cpp/Stone/env"/>
+					<Add directory="D:/code/cpp/Stone/exception"/>
+					<Add directory="D:/code/cpp/Stone/stype"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="D:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -80,16 +90,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/code/cpp/Stone/BasicEnv.hpp">
-			<Option target="Stone"/>
-		</Unit>
 		<Unit filename="D:/code/cpp/Stone/BasicParser.cpp">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/BasicParser.h">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/Env.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/FuncParser.cpp">
@@ -110,22 +114,7 @@
 		<Unit filename="D:/code/cpp/Stone/Naive.h">
 			<Option target="Stone"/>
 		</Unit>
-		<Unit filename="D:/code/cpp/Stone/NestEnv.hpp">
-			<Option target="Stone"/>
-		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Parse.hpp">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/ParseException.cpp">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/ParseException.h">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/StoneException.cpp">
-			<Option target="Stone"/>
-		</Unit>
-		<Unit filename="D:/code/cpp/Stone/StoneException.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/Token.hpp">
@@ -141,6 +130,27 @@
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/ast/AstTree.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/env/BasicEnv.hpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/env/Env.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/env/NestEnv.hpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/exception/ParseException.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/exception/ParseException.h">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/exception/StoneException.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/exception/StoneException.h">
 			<Option target="Stone"/>
 		</Unit>
 		<Unit filename="D:/code/cpp/Stone/main.cpp">

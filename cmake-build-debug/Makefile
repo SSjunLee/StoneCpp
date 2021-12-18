@@ -250,60 +250,6 @@ Naive.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/Naive.cpp.s
 .PHONY : Naive.cpp.s
 
-ParseException.obj: ParseException.cpp.obj
-
-.PHONY : ParseException.obj
-
-# target to build an object file
-ParseException.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ParseException.cpp.obj
-.PHONY : ParseException.cpp.obj
-
-ParseException.i: ParseException.cpp.i
-
-.PHONY : ParseException.i
-
-# target to preprocess a source file
-ParseException.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ParseException.cpp.i
-.PHONY : ParseException.cpp.i
-
-ParseException.s: ParseException.cpp.s
-
-.PHONY : ParseException.s
-
-# target to generate assembly for a file
-ParseException.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ParseException.cpp.s
-.PHONY : ParseException.cpp.s
-
-StoneException.obj: StoneException.cpp.obj
-
-.PHONY : StoneException.obj
-
-# target to build an object file
-StoneException.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.obj
-.PHONY : StoneException.cpp.obj
-
-StoneException.i: StoneException.cpp.i
-
-.PHONY : StoneException.i
-
-# target to preprocess a source file
-StoneException.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.i
-.PHONY : StoneException.cpp.i
-
-StoneException.s: StoneException.cpp.s
-
-.PHONY : StoneException.s
-
-# target to generate assembly for a file
-StoneException.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/StoneException.cpp.s
-.PHONY : StoneException.cpp.s
-
 ast/AstNodeType.obj: ast/AstNodeType.cpp.obj
 
 .PHONY : ast/AstNodeType.obj
@@ -357,6 +303,60 @@ ast/AstTree.s: ast/AstTree.cpp.s
 ast/AstTree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/ast/AstTree.cpp.s
 .PHONY : ast/AstTree.cpp.s
+
+exception/ParseException.obj: exception/ParseException.cpp.obj
+
+.PHONY : exception/ParseException.obj
+
+# target to build an object file
+exception/ParseException.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/ParseException.cpp.obj
+.PHONY : exception/ParseException.cpp.obj
+
+exception/ParseException.i: exception/ParseException.cpp.i
+
+.PHONY : exception/ParseException.i
+
+# target to preprocess a source file
+exception/ParseException.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/ParseException.cpp.i
+.PHONY : exception/ParseException.cpp.i
+
+exception/ParseException.s: exception/ParseException.cpp.s
+
+.PHONY : exception/ParseException.s
+
+# target to generate assembly for a file
+exception/ParseException.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/ParseException.cpp.s
+.PHONY : exception/ParseException.cpp.s
+
+exception/StoneException.obj: exception/StoneException.cpp.obj
+
+.PHONY : exception/StoneException.obj
+
+# target to build an object file
+exception/StoneException.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/StoneException.cpp.obj
+.PHONY : exception/StoneException.cpp.obj
+
+exception/StoneException.i: exception/StoneException.cpp.i
+
+.PHONY : exception/StoneException.i
+
+# target to preprocess a source file
+exception/StoneException.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/StoneException.cpp.i
+.PHONY : exception/StoneException.cpp.i
+
+exception/StoneException.s: exception/StoneException.cpp.s
+
+.PHONY : exception/StoneException.s
+
+# target to generate assembly for a file
+exception/StoneException.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/exception/StoneException.cpp.s
+.PHONY : exception/StoneException.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -514,18 +514,18 @@ help:
 	@echo ... Naive.obj
 	@echo ... Naive.i
 	@echo ... Naive.s
-	@echo ... ParseException.obj
-	@echo ... ParseException.i
-	@echo ... ParseException.s
-	@echo ... StoneException.obj
-	@echo ... StoneException.i
-	@echo ... StoneException.s
 	@echo ... ast/AstNodeType.obj
 	@echo ... ast/AstNodeType.i
 	@echo ... ast/AstNodeType.s
 	@echo ... ast/AstTree.obj
 	@echo ... ast/AstTree.i
 	@echo ... ast/AstTree.s
+	@echo ... exception/ParseException.obj
+	@echo ... exception/ParseException.i
+	@echo ... exception/ParseException.s
+	@echo ... exception/StoneException.obj
+	@echo ... exception/StoneException.i
+	@echo ... exception/StoneException.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

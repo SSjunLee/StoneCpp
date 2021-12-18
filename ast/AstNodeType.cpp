@@ -4,9 +4,8 @@
 #include <iostream>
 #include <sstream>
 #include "AstNodeType.h"
-#include "../stype/Function.h"
-#include "../stype/BasicType.h"
-#include "../stype/NaiveFunction.h"
+#include "Function.h"
+#include "NaiveFunction.h"
 std::string IfStmt::toString() const noexcept {
     std::string ret;
     ret+="( if(" + condition()->toString()+")"+thenBlock()->toString();

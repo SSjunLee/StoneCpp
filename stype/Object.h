@@ -6,7 +6,7 @@
 #define STONE_OBJECT_H
 
 #include <memory>
-#include "../StoneException.h"
+#include "StoneException.h"
 class Object {
 public:
     typedef std::shared_ptr<Object> ptr;

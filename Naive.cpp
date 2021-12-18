@@ -3,13 +3,11 @@
 //
 
 #include "Naive.h"
-#include "stype/Object.h"
-#include "stype/BasicType.h"
-#include "stype/NaiveFunction.h"
+#include "BasicType.h"
+#include "NaiveFunction.h"
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <functional>
 Object::ptr naive_print(const std::vector<Object::ptr>& args){
     for(auto&arg:args){
         std::cout<<arg<<' ';

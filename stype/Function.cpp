@@ -3,7 +3,7 @@
 //
 #include <sstream>
 #include "Function.h"
-#include "../NestEnv.hpp"
+#include "NestEnv.hpp"
 const std::string Function::TYPE = "function";
 
 Function::Function(AstTree::cptr parameters, AstTree::cptr body, Env *ev) :

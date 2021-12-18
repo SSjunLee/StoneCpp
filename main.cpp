@@ -16,8 +16,8 @@ void inter_run(const std::string&path){
     FuncParser parser;
     while(lexer.peek(0)!=Token::eof){
         auto bp= parser.parse(lexer);
-        //cout<<bp->nodeType()<<endl;
-        //cout<<bp<<endl;
+        cout<<bp->nodeType()<<endl;
+        cout<<bp<<endl;
         cout<<"=>"<<bp->eval(env)<<endl;
     }
 }
@@ -26,5 +26,5 @@ void inter_run(const std::string&path){
 
 int main() {
     system("chcp 65001");
-    inter_run("D:\\code\\cpp\\Stone\\testDemo\\f4");
+    inter_run("D:\\code\\cpp\\Stone\\tests\\f5");
 }

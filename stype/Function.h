@@ -5,7 +5,7 @@
 #ifndef STONE_FUNCTION_H
 #define STONE_FUNCTION_H
 
-#include "../ast/AstTree.h"
+#include "AstTree.h"
 #include "Object.h"
 class Function: public Object{
 public:

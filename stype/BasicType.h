@@ -8,8 +8,8 @@
 #include <memory>
 #include <utility>
 #include <ostream>
-#include "../StoneException.h"
-#include "../ast/AstTree.h"
+#include "StoneException.h"
+#include "AstTree.h"
 #include "Object.h"
 
 

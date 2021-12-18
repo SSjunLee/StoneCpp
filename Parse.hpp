@@ -9,7 +9,7 @@
 #include <unordered_map>
 #include <utility>
 #include <vector>
-#include "ast/AstTree.h"
+#include "AstTree.h"
 #include "Lexer.h"
 #include "ParseException.h"
 
