@@ -4,7 +4,10 @@
 #include <iostream>
 #include <sstream>
 #include "AstNodeType.h"
+#include "NestEnv.hpp"
+#include "ClassInfo.h"
 #include "Function.h"
+#include "StoneObject.h"
 #include "NaiveFunction.h"
 std::string IfStmt::toString() const noexcept {
     std::string ret;
@@ -61,40 +64,67 @@ bool PrimaryExpr::hasPostFix(int nest) const {
     return numChild() - nest > 1;
 }
 
-//nest 表示从外层数的函数调用的次数
-//写成递归是为了扩展闭包
+//nest 倒是第几个元素
 Object::ptr PrimaryExpr::evalSub(Env &env, int nest) const {
+    //如果存在前一个元素
     if(hasPostFix(nest)){
+        //计算前一个元素的结果
         auto target= evalSub(env,nest+1);
         auto postfixPtr = std::dynamic_pointer_cast<const Postfix>(postFix(nest));
+        //将前一个元素计算的结果作为这次运算的输入进行计算
+        /**
+         *  a.get().b.c.d.e = 1
+         *  开始时，nest = 0 进行dfs,直到nest = 6
+         *  此时,没有前一个元素，则 a.eval(env) ，即从上下文里取出对象a，回溯，nest = 5
+         *  此时，取出计算当前元素.get  (.get).eval(env,a)  从对象a中读到get并返回  nest = 4
+         *  此时 取出当前元素()  执行get()，返回函数结果 nest = 3
+         */
         return postfixPtr->eval(env,target);
     }else
     return operand()->eval(env);
 }
 
 Object::ptr PrimaryExpr::eval(Env &env) const {
-    //TODO 先暂时这样实现
+    /*
     //如果是函数调用，child(0)必然是函数的名字，是一个Name类型
     //name.eval 就是从env 里取出name关联的obj
     auto res = operand()->eval(env);
-
     //std::cout<<operand()->nodeType()<<std::endl;
     int n = numChild();
     for (int i = 1; i <n ; ++i) {
         auto args = std::dynamic_pointer_cast<const Args>(child(i));
         res= args->eval(env,res);
     }
-
-
-    return res;
-    //return evalSub(env,0);
-
+    return res;*/
+    /**
+     * 从右往左进行计算
+      对于函数 a(1,2,3,4),从4开始放入环境
+      对于对象 a.get().next.x = 3
+     */
+    return evalSub(env,0);
 };
 
 Object::ptr BinaryExpr::eval(Env &env) const {
     const std::string& o = op();
     auto r = right()->eval(env);
     if(o == "="){
+        auto p = std::dynamic_pointer_cast<const PrimaryExpr>(left());
+        if(p&&p->hasPostFix(0)){
+            //获取链式调用的最后一个元素
+          auto member =   std::dynamic_pointer_cast<const Dot>(p->postFix(0));
+          if(member){
+            //如果链式调用最后一个元素是.
+          auto obj =   std::dynamic_pointer_cast<StoneObject>(p->evalSub(env,1));
+          if(obj){
+              try {
+                  obj->write(member->name(),r);
+                  return r;
+              } catch (std::exception&r) {
+                  throw StoneException("bad member access " + location() + ": " + member->name());
+              }
+          }
+          }
+        }
         //赋值的情况
         //普通变量赋值
         auto l = std::dynamic_pointer_cast<const Name>(left());
@@ -124,7 +154,7 @@ Object::ptr NegativeExpr::eval(Env &env) const {
 
 Object::ptr DefStmt::eval(Env &env) const {
      env.putNew(name(),std::make_shared<Function>(params(),body(),&env));
-    return std::make_shared<Str>(name());
+     return std::make_shared<Str>(name());
 }
 
 
@@ -195,3 +225,37 @@ Object::ptr DefineStmt::eval(Env &env) const {
     env.putNew(name(),r);
     return r;
 }
+
+Object::ptr ClassStmt::eval(Env &env) const {
+    auto classInfo =
+    std::make_shared<ClassInfo>(shared_from_this(),&env);
+    env.putNew(classInfo->name(),classInfo);
+    return std::make_shared<Str>(name());
+}
+
+Object::ptr Dot::eval(Env &env, Object::ptr value) const {
+    std::string member = name();
+    //std::cout<<"dot eval"<<value<<" name = "<<name();
+    auto ci = std::dynamic_pointer_cast<ClassInfo>(value);
+    if(ci && member == "new"){
+       NestEnv* ev = new NestEnv(&env);
+       auto so = std::make_shared<StoneObject>(ev);
+       initObject(ci,ev);
+       ev->putNew("this",so);
+       return so;
+    }
+    auto so = std::dynamic_pointer_cast<StoneObject>(value);
+    if(so){
+        return so->read(member);
+    }
+    throw StoneException("bad member access "+member +" "+location());
+}
+
+void Dot::initObject(Object::ptr c, NestEnv *pEnv) const {
+    auto ci = std::dynamic_pointer_cast<ClassInfo>(c);
+    auto superClass = ci->superClass();
+    if(superClass)initObject(superClass,pEnv);
+    ci->body()->eval(*pEnv);
+}
+
+

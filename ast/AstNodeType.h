@@ -5,6 +5,7 @@
 #ifndef STONE_ASTNODETYPE_H
 #define STONE_ASTNODETYPE_H
 
+#include <env/NestEnv.hpp>
 #include "AstTree.h"
 #include "BasicType.h"
 
@@ -47,7 +48,6 @@ public:
         return "PrimaryExpr " + AstList::toString();
     }
     std::string nodeType() const override {return  "PrimaryExpr";}
-private:
     bool hasPostFix(int nest) const;
     AstList::cptr postFix(int nest) const{
         return child((size_t)numChild() - nest -1);
@@ -160,6 +160,36 @@ public:
     Object::ptr eval(Env &env) const override;
 };
 
+
+class ClassBody: public AstList{
+public:
+    using AstList::AstList;
+    Object::ptr eval(Env &env) const override{
+        for(auto&c:mChildren){
+            c->eval(env);
+        }
+        return nullptr;
+    }
+};
+
+class ClassStmt: public AstList, public std::enable_shared_from_this<ClassStmt>{
+public:
+    using AstList::AstList;
+    std::string name() const {return child(0)->getToken()->getText();};
+    std::string nodeType() const override{return "ClassStmt";}
+    std::string superClass() const{
+        if(numChild()<3)return "";
+        return child(1)->getToken()->getText();
+    }
+    AstList::cptr body() const {return child(numChild()-1);}
+    std::string toString() const noexcept override{
+        std::string parent = superClass();
+        if(parent=="")parent = "*";
+        return "(class "+name()+" extends "+parent+" body: "+body()->toString() + ")";
+    }
+    Object::ptr eval(Env &env) const override;
+};
+
 class Postfix: public AstList{
 public:
     using AstList::AstList;
@@ -171,7 +201,7 @@ public:
 
 };
 
-class Args: public Postfix,std::enable_shared_from_this<Args>{
+class Args: public Postfix, public std::enable_shared_from_this<Args>{
 public:
     using Postfix::Postfix;
     std::string nodeType() const override {return  "Args";}
@@ -182,6 +212,19 @@ public:
     }
 };
 
+class Dot: public Postfix {
+public:
+    using Postfix::Postfix;
+    std::string nodeType() const override {return "dot";}
+    Object::ptr eval(Env &env, Object::ptr value) const override;
+    std::string name() const {return child(0)->getToken()->getText();}
+    std::string toString() const noexcept override{
+        return "."+name();
+    }
+
+private:
+    void initObject(Object::ptr classInfo, NestEnv *pEnv) const;
+};
 class Fun: public AstList{
 public:
     using AstList::AstList;

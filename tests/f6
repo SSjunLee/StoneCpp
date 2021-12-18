@@ -1,0 +1,10 @@
+class A extends B {
+    var a = 1
+    def move(a){
+    print(" move ",this.a,a)
+    }
+}
+var a = A.new
+a.move(100)
+a.a=3
+a.move(100)

@@ -1,0 +1,9 @@
+var gloable = "woqu"
+class A{
+var pa = "来救你男"
+var test = fun(){gloable}
+}
+
+class B extends A{}
+
+B.new.test()

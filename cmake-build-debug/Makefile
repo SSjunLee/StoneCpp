@@ -142,60 +142,6 @@ Stone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/build
 .PHONY : Stone/fast
 
-BasicParser.obj: BasicParser.cpp.obj
-
-.PHONY : BasicParser.obj
-
-# target to build an object file
-BasicParser.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.obj
-.PHONY : BasicParser.cpp.obj
-
-BasicParser.i: BasicParser.cpp.i
-
-.PHONY : BasicParser.i
-
-# target to preprocess a source file
-BasicParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.i
-.PHONY : BasicParser.cpp.i
-
-BasicParser.s: BasicParser.cpp.s
-
-.PHONY : BasicParser.s
-
-# target to generate assembly for a file
-BasicParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/BasicParser.cpp.s
-.PHONY : BasicParser.cpp.s
-
-FuncParser.obj: FuncParser.cpp.obj
-
-.PHONY : FuncParser.obj
-
-# target to build an object file
-FuncParser.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/FuncParser.cpp.obj
-.PHONY : FuncParser.cpp.obj
-
-FuncParser.i: FuncParser.cpp.i
-
-.PHONY : FuncParser.i
-
-# target to preprocess a source file
-FuncParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/FuncParser.cpp.i
-.PHONY : FuncParser.cpp.i
-
-FuncParser.s: FuncParser.cpp.s
-
-.PHONY : FuncParser.s
-
-# target to generate assembly for a file
-FuncParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/FuncParser.cpp.s
-.PHONY : FuncParser.cpp.s
-
 Lexer.obj: Lexer.cpp.obj
 
 .PHONY : Lexer.obj
@@ -385,6 +331,87 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parser/BasicParser.obj: parser/BasicParser.cpp.obj
+
+.PHONY : parser/BasicParser.obj
+
+# target to build an object file
+parser/BasicParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj
+.PHONY : parser/BasicParser.cpp.obj
+
+parser/BasicParser.i: parser/BasicParser.cpp.i
+
+.PHONY : parser/BasicParser.i
+
+# target to preprocess a source file
+parser/BasicParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/BasicParser.cpp.i
+.PHONY : parser/BasicParser.cpp.i
+
+parser/BasicParser.s: parser/BasicParser.cpp.s
+
+.PHONY : parser/BasicParser.s
+
+# target to generate assembly for a file
+parser/BasicParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/BasicParser.cpp.s
+.PHONY : parser/BasicParser.cpp.s
+
+parser/ClassParser.obj: parser/ClassParser.cpp.obj
+
+.PHONY : parser/ClassParser.obj
+
+# target to build an object file
+parser/ClassParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj
+.PHONY : parser/ClassParser.cpp.obj
+
+parser/ClassParser.i: parser/ClassParser.cpp.i
+
+.PHONY : parser/ClassParser.i
+
+# target to preprocess a source file
+parser/ClassParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ClassParser.cpp.i
+.PHONY : parser/ClassParser.cpp.i
+
+parser/ClassParser.s: parser/ClassParser.cpp.s
+
+.PHONY : parser/ClassParser.s
+
+# target to generate assembly for a file
+parser/ClassParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ClassParser.cpp.s
+.PHONY : parser/ClassParser.cpp.s
+
+parser/FuncParser.obj: parser/FuncParser.cpp.obj
+
+.PHONY : parser/FuncParser.obj
+
+# target to build an object file
+parser/FuncParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj
+.PHONY : parser/FuncParser.cpp.obj
+
+parser/FuncParser.i: parser/FuncParser.cpp.i
+
+.PHONY : parser/FuncParser.i
+
+# target to preprocess a source file
+parser/FuncParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/FuncParser.cpp.i
+.PHONY : parser/FuncParser.cpp.i
+
+parser/FuncParser.s: parser/FuncParser.cpp.s
+
+.PHONY : parser/FuncParser.s
+
+# target to generate assembly for a file
+parser/FuncParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/FuncParser.cpp.s
+.PHONY : parser/FuncParser.cpp.s
+
 stype/BasicType.obj: stype/BasicType.cpp.obj
 
 .PHONY : stype/BasicType.obj
@@ -493,6 +520,33 @@ stype/Object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/Object.cpp.s
 .PHONY : stype/Object.cpp.s
 
+stype/StoneObject.obj: stype/StoneObject.cpp.obj
+
+.PHONY : stype/StoneObject.obj
+
+# target to build an object file
+stype/StoneObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj
+.PHONY : stype/StoneObject.cpp.obj
+
+stype/StoneObject.i: stype/StoneObject.cpp.i
+
+.PHONY : stype/StoneObject.i
+
+# target to preprocess a source file
+stype/StoneObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/StoneObject.cpp.i
+.PHONY : stype/StoneObject.cpp.i
+
+stype/StoneObject.s: stype/StoneObject.cpp.s
+
+.PHONY : stype/StoneObject.s
+
+# target to generate assembly for a file
+stype/StoneObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/stype/StoneObject.cpp.s
+.PHONY : stype/StoneObject.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -502,12 +556,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Stone
-	@echo ... BasicParser.obj
-	@echo ... BasicParser.i
-	@echo ... BasicParser.s
-	@echo ... FuncParser.obj
-	@echo ... FuncParser.i
-	@echo ... FuncParser.s
 	@echo ... Lexer.obj
 	@echo ... Lexer.i
 	@echo ... Lexer.s
@@ -529,6 +577,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... parser/BasicParser.obj
+	@echo ... parser/BasicParser.i
+	@echo ... parser/BasicParser.s
+	@echo ... parser/ClassParser.obj
+	@echo ... parser/ClassParser.i
+	@echo ... parser/ClassParser.s
+	@echo ... parser/FuncParser.obj
+	@echo ... parser/FuncParser.i
+	@echo ... parser/FuncParser.s
 	@echo ... stype/BasicType.obj
 	@echo ... stype/BasicType.i
 	@echo ... stype/BasicType.s
@@ -541,6 +598,9 @@ help:
 	@echo ... stype/Object.obj
 	@echo ... stype/Object.i
 	@echo ... stype/Object.s
+	@echo ... stype/StoneObject.obj
+	@echo ... stype/StoneObject.i
+	@echo ... stype/StoneObject.s
 .PHONY : help
 
 

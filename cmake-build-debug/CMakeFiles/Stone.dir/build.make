@@ -146,19 +146,19 @@ CMakeFiles/Stone.dir/ast/AstNodeType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/ast/AstNodeType.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\ast\AstNodeType.cpp -o CMakeFiles\Stone.dir\ast\AstNodeType.cpp.s
 
-CMakeFiles/Stone.dir/BasicParser.cpp.obj: CMakeFiles/Stone.dir/flags.make
-CMakeFiles/Stone.dir/BasicParser.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
-CMakeFiles/Stone.dir/BasicParser.cpp.obj: ../BasicParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Stone.dir/BasicParser.cpp.obj"
-	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\BasicParser.cpp.obj -c D:\code\cpp\Stone\BasicParser.cpp
+CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
+CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj: ../parser/BasicParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\parser\BasicParser.cpp.obj -c D:\code\cpp\Stone\parser\BasicParser.cpp
 
-CMakeFiles/Stone.dir/BasicParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/BasicParser.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\BasicParser.cpp > CMakeFiles\Stone.dir\BasicParser.cpp.i
+CMakeFiles/Stone.dir/parser/BasicParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/parser/BasicParser.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\parser\BasicParser.cpp > CMakeFiles\Stone.dir\parser\BasicParser.cpp.i
 
-CMakeFiles/Stone.dir/BasicParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/BasicParser.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\BasicParser.cpp -o CMakeFiles\Stone.dir\BasicParser.cpp.s
+CMakeFiles/Stone.dir/parser/BasicParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/parser/BasicParser.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\parser\BasicParser.cpp -o CMakeFiles\Stone.dir\parser\BasicParser.cpp.s
 
 CMakeFiles/Stone.dir/stype/BasicType.cpp.obj: CMakeFiles/Stone.dir/flags.make
 CMakeFiles/Stone.dir/stype/BasicType.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
@@ -174,19 +174,19 @@ CMakeFiles/Stone.dir/stype/BasicType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/stype/BasicType.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\stype\BasicType.cpp -o CMakeFiles\Stone.dir\stype\BasicType.cpp.s
 
-CMakeFiles/Stone.dir/FuncParser.cpp.obj: CMakeFiles/Stone.dir/flags.make
-CMakeFiles/Stone.dir/FuncParser.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
-CMakeFiles/Stone.dir/FuncParser.cpp.obj: ../FuncParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Stone.dir/FuncParser.cpp.obj"
-	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\FuncParser.cpp.obj -c D:\code\cpp\Stone\FuncParser.cpp
+CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
+CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj: ../parser/FuncParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\parser\FuncParser.cpp.obj -c D:\code\cpp\Stone\parser\FuncParser.cpp
 
-CMakeFiles/Stone.dir/FuncParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/FuncParser.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\FuncParser.cpp > CMakeFiles\Stone.dir\FuncParser.cpp.i
+CMakeFiles/Stone.dir/parser/FuncParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/parser/FuncParser.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\parser\FuncParser.cpp > CMakeFiles\Stone.dir\parser\FuncParser.cpp.i
 
-CMakeFiles/Stone.dir/FuncParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/FuncParser.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\FuncParser.cpp -o CMakeFiles\Stone.dir\FuncParser.cpp.s
+CMakeFiles/Stone.dir/parser/FuncParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/parser/FuncParser.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\parser\FuncParser.cpp -o CMakeFiles\Stone.dir\parser\FuncParser.cpp.s
 
 CMakeFiles/Stone.dir/stype/Object.cpp.obj: CMakeFiles/Stone.dir/flags.make
 CMakeFiles/Stone.dir/stype/Object.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
@@ -258,6 +258,34 @@ CMakeFiles/Stone.dir/exception/StoneException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/exception/StoneException.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\exception\StoneException.cpp -o CMakeFiles\Stone.dir\exception\StoneException.cpp.s
 
+CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
+CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj: ../parser/ClassParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\parser\ClassParser.cpp.obj -c D:\code\cpp\Stone\parser\ClassParser.cpp
+
+CMakeFiles/Stone.dir/parser/ClassParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/parser/ClassParser.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\parser\ClassParser.cpp > CMakeFiles\Stone.dir\parser\ClassParser.cpp.i
+
+CMakeFiles/Stone.dir/parser/ClassParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/parser/ClassParser.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\parser\ClassParser.cpp -o CMakeFiles\Stone.dir\parser\ClassParser.cpp.s
+
+CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj: CMakeFiles/Stone.dir/flags.make
+CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj: CMakeFiles/Stone.dir/includes_CXX.rsp
+CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj: ../stype/StoneObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj"
+	D:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Stone.dir\stype\StoneObject.cpp.obj -c D:\code\cpp\Stone\stype\StoneObject.cpp
+
+CMakeFiles/Stone.dir/stype/StoneObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Stone.dir/stype/StoneObject.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\cpp\Stone\stype\StoneObject.cpp > CMakeFiles\Stone.dir\stype\StoneObject.cpp.i
+
+CMakeFiles/Stone.dir/stype/StoneObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Stone.dir/stype/StoneObject.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\cpp\Stone\stype\StoneObject.cpp -o CMakeFiles\Stone.dir\stype\StoneObject.cpp.s
+
 # Object files for target Stone
 Stone_OBJECTS = \
 "CMakeFiles/Stone.dir/main.cpp.obj" \
@@ -265,14 +293,16 @@ Stone_OBJECTS = \
 "CMakeFiles/Stone.dir/exception/ParseException.cpp.obj" \
 "CMakeFiles/Stone.dir/ast/AstTree.cpp.obj" \
 "CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj" \
-"CMakeFiles/Stone.dir/BasicParser.cpp.obj" \
+"CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj" \
 "CMakeFiles/Stone.dir/stype/BasicType.cpp.obj" \
-"CMakeFiles/Stone.dir/FuncParser.cpp.obj" \
+"CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj" \
 "CMakeFiles/Stone.dir/stype/Object.cpp.obj" \
 "CMakeFiles/Stone.dir/stype/Function.cpp.obj" \
 "CMakeFiles/Stone.dir/Naive.cpp.obj" \
 "CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj" \
-"CMakeFiles/Stone.dir/exception/StoneException.cpp.obj"
+"CMakeFiles/Stone.dir/exception/StoneException.cpp.obj" \
+"CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj" \
+"CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj"
 
 # External object files for target Stone
 Stone_EXTERNAL_OBJECTS =
@@ -282,19 +312,21 @@ Stone.exe: CMakeFiles/Stone.dir/Lexer.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/exception/ParseException.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/ast/AstTree.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/ast/AstNodeType.cpp.obj
-Stone.exe: CMakeFiles/Stone.dir/BasicParser.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/BasicType.cpp.obj
-Stone.exe: CMakeFiles/Stone.dir/FuncParser.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/Object.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/Function.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/Naive.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/stype/NaiveFunction.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/exception/StoneException.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj
+Stone.exe: CMakeFiles/Stone.dir/stype/StoneObject.cpp.obj
 Stone.exe: CMakeFiles/Stone.dir/build.make
 Stone.exe: CMakeFiles/Stone.dir/linklibs.rsp
 Stone.exe: CMakeFiles/Stone.dir/objects1.rsp
 Stone.exe: CMakeFiles/Stone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Stone.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\code\cpp\Stone\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Stone.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Stone.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

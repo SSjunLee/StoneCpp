@@ -17,7 +17,7 @@ class Str : public Object {
 public:
     const static std::string TYPE;
 
-    Str(std::string str) : Object(TYPE), mStr(std::move(str)) {}
+    Str(std::string str);// : Object(TYPE), mStr(std::move(str)) {}
     bool eq(ptr &o) const override {
         if (o->name != TYPE)throw StoneException(o->name + " type error");
         auto other = std::dynamic_pointer_cast<const Str>(o);
@@ -45,7 +45,7 @@ class Num : public Object {
 public:
     const static std::string TYPE;
 
-    Num(double v) : Object(TYPE), v(v) {}
+    Num(double v);// : Object(TYPE), v(v) {}
 
     bool lt(ptr &o) const override {
         if (o->name != TYPE) throw StoneException("error type for" + o->name);
@@ -114,7 +114,7 @@ class Bool : public Object {
 private:
     bool v;
 public:
-    Bool(bool v) : Object(TYPE), v(v) {}
+    Bool(bool v);// : Object(TYPE), v(v) {}
 
     const static std::string TYPE;
 
