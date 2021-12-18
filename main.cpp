@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <assert.h>
 #include "Token.hpp"
 #include "ClassParser.h"
 #include "NestEnv.hpp"
@@ -23,7 +24,8 @@ void inter_run(const std::string&path){
 
 
 
-int main() {
+int main(int argc,char** argv) {
     system("chcp 65001");
-    inter_run("D:\\code\\cpp\\Stone\\tests\\f7");
+    assert(argc == 2);
+    inter_run(argv[1]);
 }

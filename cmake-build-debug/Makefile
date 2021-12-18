@@ -331,6 +331,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parser/ArrayParser.obj: parser/ArrayParser.cpp.obj
+
+.PHONY : parser/ArrayParser.obj
+
+# target to build an object file
+parser/ArrayParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ArrayParser.cpp.obj
+.PHONY : parser/ArrayParser.cpp.obj
+
+parser/ArrayParser.i: parser/ArrayParser.cpp.i
+
+.PHONY : parser/ArrayParser.i
+
+# target to preprocess a source file
+parser/ArrayParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ArrayParser.cpp.i
+.PHONY : parser/ArrayParser.cpp.i
+
+parser/ArrayParser.s: parser/ArrayParser.cpp.s
+
+.PHONY : parser/ArrayParser.s
+
+# target to generate assembly for a file
+parser/ArrayParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Stone.dir\build.make CMakeFiles/Stone.dir/parser/ArrayParser.cpp.s
+.PHONY : parser/ArrayParser.cpp.s
+
 parser/BasicParser.obj: parser/BasicParser.cpp.obj
 
 .PHONY : parser/BasicParser.obj
@@ -577,6 +604,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... parser/ArrayParser.obj
+	@echo ... parser/ArrayParser.i
+	@echo ... parser/ArrayParser.s
 	@echo ... parser/BasicParser.obj
 	@echo ... parser/BasicParser.i
 	@echo ... parser/BasicParser.s

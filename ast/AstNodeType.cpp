@@ -259,3 +259,20 @@ void Dot::initObject(Object::ptr c, NestEnv *pEnv) const {
 }
 
 
+Object::ptr ArrayLiteral::eval(Env &env) const {
+    auto arr= std::make_shared<Array>(size());
+    int i = 0;
+    for(auto&c:mChildren){
+        (*arr)[i++]= c->eval(env);
+    }
+    return arr;
+}
+
+Object::ptr ArrayRef::eval(Env &env, Object::ptr value) const {
+    auto arr = std::dynamic_pointer_cast<Array>(value);
+    if(arr){
+        auto idx = std::dynamic_pointer_cast<Num>(index()->eval(env));
+        if(idx)return (*arr)[static_cast<int>(idx->value())];
+    }
+    throw StoneException("bad array access "+location());
+}

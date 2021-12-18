@@ -225,6 +225,7 @@ public:
 private:
     void initObject(Object::ptr classInfo, NestEnv *pEnv) const;
 };
+//闭包
 class Fun: public AstList{
 public:
     using AstList::AstList;
@@ -233,6 +234,28 @@ public:
     std::string toString() const noexcept override;
     Object::ptr eval(Env &env) const override;
 
+};
+
+//数组
+class ArrayLiteral: public AstList{
+public:
+    using AstList::AstList;
+    int size() const{return numChild();}
+    std::string nodeType() const override{return "ArrayLiteral";}
+    std::string toString() const noexcept override{
+        return "array: { "+ AstList::toString()+" }";
+    }
+    Object::ptr eval(Env &env) const override;
+};
+class ArrayRef: public Postfix {
+public:
+    using Postfix::Postfix;
+    AstTree::cptr index() const {return child(0);}
+    std::string toString() const noexcept override{
+        return "[ "+index()->toString()+"]";
+    }
+    std::string nodeType() const override{return "ArrayRef";}
+    Object::ptr eval(Env &env, Object::ptr target) const override;
 };
 
 #endif //STONE_ASTNODETYPE_H

@@ -134,6 +134,15 @@ public:
 };
 
 
+class Array: public Object{
+public:
+    const static std::string TYPE;
+    explicit Array(int size);
+    Object::ptr& operator[](int i);
+    std::string toString() const noexcept override;
+protected:
+    std::vector<Object::ptr> mElements;
+};
 
 
 #endif //STONE_BASICTYPE_H

@@ -5,7 +5,7 @@
 #include "ClassParser.h"
 #include "AstNodeType.h"
 
-ClassParser::ClassParser() : FuncParser() {
+ClassParser::ClassParser() : ArrayParser() {
 
     OrRule *member = mFactory.orRule({def, defVariable});
 

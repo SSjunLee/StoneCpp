@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Stone.dir/exception/ParseException.cpp.obj"
   "CMakeFiles/Stone.dir/exception/StoneException.cpp.obj"
   "CMakeFiles/Stone.dir/main.cpp.obj"
+  "CMakeFiles/Stone.dir/parser/ArrayParser.cpp.obj"
   "CMakeFiles/Stone.dir/parser/BasicParser.cpp.obj"
   "CMakeFiles/Stone.dir/parser/ClassParser.cpp.obj"
   "CMakeFiles/Stone.dir/parser/FuncParser.cpp.obj"

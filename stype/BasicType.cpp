@@ -5,12 +5,13 @@
 #include "BasicType.h"
 #include "AstNodeType.h"
 #include "ClassInfo.h"
+#include <sstream>
 
 const std::string Num::TYPE = "Num";
 const std::string Str::TYPE = "Str";
 const std::string Bool::TYPE = "Bool";
 const std::string ClassInfo::TYPE = "Class";
-
+const std::string Array::TYPE = "Array";
 
 
 ClassInfo::ClassInfo(AstTree::cptr df, Env *ev)
@@ -43,3 +44,22 @@ std::string ClassInfo::toString() const noexcept {
 Str::Str(std::string str) : Object(TYPE), mStr(std::move(str)) {}
 Num::Num(double v) : Object(TYPE), v(v) {}
 Bool::Bool(bool v) : Object(TYPE), v(v) {}
+
+
+Array::Array(int size):Object(TYPE),mElements(size){}
+
+Object::ptr &Array::operator[](int i) {
+    if(static_cast<size_t>(i)<0 || static_cast<size_t>(i)>=mElements.size())
+        throw StoneException(i + " out of index");
+    return mElements.at(i);
+}
+
+std::string Array::toString() const noexcept {
+    std::stringstream ss;
+    ss<<"< array"<<this<<" : ";
+    for(auto &c:mElements){
+        ss<<c->toString()<<' ';
+    }
+    ss<<" >";
+    return ss.str();
+}

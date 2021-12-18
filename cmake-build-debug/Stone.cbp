@@ -146,6 +146,12 @@
 		<Unit filename="D:/code/cpp/Stone/main.cpp">
 			<Option target="Stone"/>
 		</Unit>
+		<Unit filename="D:/code/cpp/Stone/parser/ArrayParser.cpp">
+			<Option target="Stone"/>
+		</Unit>
+		<Unit filename="D:/code/cpp/Stone/parser/ArrayParser.h">
+			<Option target="Stone"/>
+		</Unit>
 		<Unit filename="D:/code/cpp/Stone/parser/BasicParser.cpp">
 			<Option target="Stone"/>
 		</Unit>
