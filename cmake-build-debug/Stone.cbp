@@ -19,7 +19,7 @@
 			</Target>
 			<Target title="Stone">
 				<Option output="D:/code/cpp/Stone/cmake-build-debug/Stone.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/code/cpp/Stone/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -46,7 +46,7 @@
 			</Target>
 			<Target title="Stone/fast">
 				<Option output="D:/code/cpp/Stone/cmake-build-debug/Stone.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/code/cpp/Stone/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>

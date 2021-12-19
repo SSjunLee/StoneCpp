@@ -4,5 +4,6 @@ class Test{
   "hehe" + b
  }
 }
-var a = [1,2,Test.new,4,5]
+var a = [1,2,Test.new,fun(){"hehe"},5]
 a[2].test(10)
+a[3]()
